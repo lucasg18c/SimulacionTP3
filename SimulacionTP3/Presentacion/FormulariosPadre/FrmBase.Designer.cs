@@ -1,4 +1,4 @@
-﻿namespace SimulacionTP3.Presentacion
+﻿namespace SimulacionTP3.Presentacion.FormulariosPadre
 {
     partial class FrmBase
     {

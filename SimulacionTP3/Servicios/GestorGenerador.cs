@@ -1,18 +1,18 @@
 ﻿using SimulacionTP3.Modelo;
-using SimulacionTP3.Presentacion;
+using SimulacionTP3.Presentacion.FormulariosPadre;
 using System;
 
 namespace SimulacionTP3.Servicios
 {
     public abstract class GestorGenerador
     {
-        protected readonly FrmGenerador formulario;
+        private readonly FrmGenerador formulario;
         private readonly Generador generador;
         private double[] serie;
         private ConteoFrecuencia[] conteo;
-        protected int intervalos, cantidad;
+        private int intervalos, cantidad;
 
-        protected abstract double[] GenerarSerie(Generador generador);
+        protected abstract double[] GenerarSerie(Generador generador, int cantidad);
         protected abstract void PedirDatos();
 
         public GestorGenerador(FrmGenerador formulario)
@@ -28,7 +28,7 @@ namespace SimulacionTP3.Servicios
                 intervalos = formulario.GetIntervalos();
                 cantidad = formulario.GetCantidad();
                 PedirDatos();
-                serie = GenerarSerie(generador);
+                serie = GenerarSerie(generador, cantidad);
                 ConteoFrecuencias();
                 
                 formulario.Limpiar();
@@ -54,6 +54,7 @@ namespace SimulacionTP3.Servicios
             return serieStr;
         }
 
+        // TODO: ARREGLAR
         private void ConteoFrecuencias()
         {
             int posicion;

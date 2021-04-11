@@ -51,5 +51,80 @@ namespace SimulacionTP3.Formularios.ControlesUsuario
             }
             return double.NaN;
         }
+
+        //public void NumerosPosNegDec(TextBox txt, KeyPressEventArgs e)
+        //{
+        //    string cadena = txt.Text;
+        //    string filtro = "1234567890";
+
+        //    if (cadena.Length == 0)
+        //    {
+        //        filtro += "-";
+        //    }
+
+        //    if (cadena.Length > 0)
+        //    {
+        //        filtro += ".";
+        //    }
+
+        //    foreach (var caracter in filtro)
+        //    {
+        //        if (e.KeyChar == caracter)
+        //        {
+        //            e.Handled = false;
+        //            break;
+        //        }
+        //        else
+        //        {
+        //            e.Handled = true;
+        //        }
+
+        //    }
+
+        //    if (char.IsControl(e.KeyChar))
+        //    {
+        //        e.Handled = false;
+        //    }
+
+        //    if (e.KeyChar == '.' && cadena.IndexOf('.') > -1)
+        //    {
+        //        e.Handled = true;
+        //    }
+        //}
+
+        //public void NumerosPosDec(TextBox txt, KeyPressEventArgs e)
+        //{
+        //    string cadena = txt.Text;
+        //    string filtro = "1234567890";
+
+        //    if (cadena.Length > 0)
+        //    {
+        //        filtro += ".";
+        //    }
+
+        //    foreach (var caracter in filtro)
+        //    {
+        //        if (e.KeyChar == caracter)
+        //        {
+        //            e.Handled = false;
+        //            break;
+        //        }
+        //        else
+        //        {
+        //            e.Handled = true;
+        //        }
+
+        //    }
+
+        //    if (char.IsControl(e.KeyChar))
+        //    {
+        //        e.Handled = false;
+        //    }
+
+        //    if (e.KeyChar == '.' && cadena.IndexOf('.') > -1)
+        //    {
+        //        e.Handled = true;
+        //    }
+        //}
     }
 }

@@ -70,6 +70,7 @@
             // txtA
             // 
             this.txtA.Location = new System.Drawing.Point(28, 54);
+            this.txtA.MaxLength = 6;
             this.txtA.Name = "txtA";
             this.txtA.ShortcutsEnabled = false;
             this.txtA.Size = new System.Drawing.Size(153, 25);
@@ -96,6 +97,7 @@
             // txtB
             // 
             this.txtB.Location = new System.Drawing.Point(28, 113);
+            this.txtB.MaxLength = 6;
             this.txtB.Name = "txtB";
             this.txtB.ShortcutsEnabled = false;
             this.txtB.Size = new System.Drawing.Size(153, 25);

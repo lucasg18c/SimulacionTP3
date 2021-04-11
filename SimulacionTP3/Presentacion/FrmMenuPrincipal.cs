@@ -1,4 +1,4 @@
-﻿//using SimulacionTP3.Formularios;
+﻿using SimulacionTP3.Presentacion.FormulariosPadre;
 using System;
 
 namespace SimulacionTP3.Presentacion
@@ -13,12 +13,12 @@ namespace SimulacionTP3.Presentacion
         private void ClickBtnPoisson(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
-            //Abrir(new FrmPoisson());
+            Abrir(new FrmPoisson());
         }
 
         private void ClickBtnNormalBM(object sender, EventArgs e)
         {
-            //Abrir(new FrmNormalBM());
+            Abrir(new FrmNormalBM());
         }
 
         private void ClickBtnNormal(object sender, EventArgs e)
@@ -29,19 +29,19 @@ namespace SimulacionTP3.Presentacion
         private void ClickBtnUniforme(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
-            Abrir(new Presentacion.FrmUniforme());
+            Abrir(new FrmUniforme());
         }
 
         private void ClickBtnExponencial(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
-            //Abrir(new FrmExponencial());
+            Abrir(new FrmExponencial());
         }
 
         private void ClickBtnConvolucion(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
-            //Abrir(new FrmNormalConv());
+            Abrir(new FrmNormalConvolucion());
         }
     }
 }

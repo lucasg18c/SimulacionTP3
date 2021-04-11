@@ -2,7 +2,7 @@
 using SimulacionTP3.Servicios;
 using System;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosPadre
 {
     public partial class FrmGenerador : FrmBase
     {

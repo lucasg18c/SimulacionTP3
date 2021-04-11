@@ -1,5 +1,6 @@
 ﻿using SimulacionTP3.Modelo;
 using SimulacionTP3.Presentacion;
+using SimulacionTP3.Presentacion.FormulariosPadre;
 
 namespace SimulacionTP3.Servicios
 {
@@ -12,7 +13,7 @@ namespace SimulacionTP3.Servicios
             frmUniforme = (FrmUniforme)formulario;
         }
 
-        protected override double[] GenerarSerie(Generador generador)
+        protected override double[] GenerarSerie(Generador generador, int cantidad)
         {
             return generador.GenerarUniforme(a, b, cantidad);
         }

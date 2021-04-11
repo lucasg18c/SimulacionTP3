@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosPadre
 {
     public partial class FrmBase : Form
     {

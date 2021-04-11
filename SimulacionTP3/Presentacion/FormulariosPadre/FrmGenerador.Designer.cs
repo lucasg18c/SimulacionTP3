@@ -1,6 +1,6 @@
 ﻿using SimulacionTP3.Formularios.ControlesUsuario;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosPadre
 {
     partial class FrmGenerador
     {
@@ -113,6 +113,7 @@ namespace SimulacionTP3.Presentacion
             this.txtSerie.Multiline = true;
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.ReadOnly = true;
+            this.txtSerie.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSerie.Size = new System.Drawing.Size(669, 131);
             this.txtSerie.TabIndex = 1;
             // 

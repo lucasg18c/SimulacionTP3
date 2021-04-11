@@ -1,64 +1,28 @@
-﻿using SimulacionTP3.Formularios;
-using SimulacionTP3.Modelo.Generadores;
-using System;
+﻿using SimulacionTP3.Modelo;
+using SimulacionTP3.Presentacion;
+using SimulacionTP3.Presentacion.FormulariosPadre;
 
 namespace SimulacionTP3.Servicios
 {
-    public class GestorExponencial
+    public class GestorExponencial : GestorGenerador
     {
-        private FrmExponencial formulario;
-        private GeneradorBase generador;
-        private static readonly int DECIMALES_REDONDEO = 4;
-
-        public GestorExponencial(FrmExponencial formulario)
+        private readonly FrmExponencial frmExponencial;
+        private double frecuencia, media;
+            
+        public GestorExponencial(FrmGenerador formulario) : base(formulario)
         {
-            this.formulario = formulario;
-            generador = new GeneradorExponencial();
+            frmExponencial = (FrmExponencial)formulario;
         }
 
-        public void Generar()
+        protected override double[] GenerarSerie(Generador generador, int cantidad)
         {
-            try
-            {
-                double media, frecuencia, cantidad;
-                double[] serie;
-
-                media = formulario.GetMedia();
-                frecuencia = formulario.GetFrecuencia();
-                cantidad = formulario.GetCantidad();
-
-                Validar(media, frecuencia, cantidad);
-
-                serie = generador.Generar((int)cantidad, media, frecuencia);
-
-                formulario.MostrarTabla(FormatearSerie(serie));
-            }
-            catch (Exception ex)
-            {
-                formulario.MostrarError(ex.Message);
-            }
+            return generador.GenerarExponencial(media, frecuencia, cantidad);
         }
 
-        private string[] FormatearSerie(double[] serie)
+        protected override void PedirDatos()
         {
-            string[] numeros = new string[serie.Length];
-
-            for (int i = 0; i < serie.Length; i++)
-                numeros[i] = Math.Round(serie[i], DECIMALES_REDONDEO).ToString();
-
-            return numeros;
-        }
-
-        private void Validar(double media, double frecuencia, double cantidad)
-        {
-            if (double.IsNaN(media))
-                throw new ApplicationException("El valor de la media no es válido.");
-
-            if (double.IsNaN(frecuencia))
-                throw new ApplicationException("El valor de la frecuencia no es válido.");
-
-            if (double.IsNaN(cantidad))
-                throw new ApplicationException("La cantidad no es válida.");
+            frecuencia = frmExponencial.GetFrecuencia();
+            media = frmExponencial.GetMedia();
         }
     }
 }
