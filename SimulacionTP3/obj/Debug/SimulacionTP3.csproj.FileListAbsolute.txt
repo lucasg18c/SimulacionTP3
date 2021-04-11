@@ -1,0 +1,33 @@
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe.config
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.pdb
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csprojAssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Form1.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.exe
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.pdb
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.frmUniforme.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.frmExponencial.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.frmPoisson.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.frmNormalBM.resources
+C:\Users\franc\OneDrive\Escritorio\Pruebas Franco C#\SimulacionTP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.frmNormalConv.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe.config
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.pdb
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csprojAssemblyReference.cache
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.FrmExponencial.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.FrmNormalBM.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.FrmNormalConv.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.FrmPoisson.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Formularios.FrmUniforme.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Properties.Resources.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.GenerateResource.cache
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.exe
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.pdb
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FrmBase.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FrmGenerador.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FrmMenuPrincipal.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FrmUniforme.resources
