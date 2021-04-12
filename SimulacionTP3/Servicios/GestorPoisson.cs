@@ -1,4 +1,5 @@
 ﻿using SimulacionTP3.Modelo;
+using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 
@@ -22,6 +23,11 @@ namespace SimulacionTP3.Servicios
         protected override void PedirDatos()
         {
             frecuencia = frmPoisson.GetFrecuencia();
+        }
+
+        protected override IDistribucion GetDistribucion()
+        {
+            return new Poisson();
         }
     }
 }

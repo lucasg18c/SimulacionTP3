@@ -1,4 +1,5 @@
 ﻿using SimulacionTP3.Modelo;
+using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 
@@ -23,6 +24,11 @@ namespace SimulacionTP3.Servicios
         {
             media = frmConvolucion.GetMedia();
             desviacion = frmConvolucion.GetDesviacion();
+        }
+
+        protected override IDistribucion GetDistribucion()
+        {
+            return new Normal();
         }
     }
 }

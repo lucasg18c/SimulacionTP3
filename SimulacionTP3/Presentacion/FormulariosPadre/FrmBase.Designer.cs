@@ -41,7 +41,7 @@
             this.Name = "FrmBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBase";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBase_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EnCierre);
             this.ResumeLayout(false);
 
         }

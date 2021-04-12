@@ -1,4 +1,5 @@
 ﻿using SimulacionTP3.Modelo;
+using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 
@@ -17,6 +18,11 @@ namespace SimulacionTP3.Servicios
         protected override double[] GenerarSerie(Generador generador, int cantidad)
         {
             return generador.GenerarExponencial(media, frecuencia, cantidad);
+        }
+
+        protected override IDistribucion GetDistribucion()
+        {
+            return new Exponencial();
         }
 
         protected override void PedirDatos()

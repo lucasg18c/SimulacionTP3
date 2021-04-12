@@ -4,7 +4,7 @@
     {
         public double Desde { get; set; }
         public double Hasta { get; set; }
-        public double Cantidad { get; set; }
+        public int Cantidad { get; set; }
 
         public void Contar()
         {

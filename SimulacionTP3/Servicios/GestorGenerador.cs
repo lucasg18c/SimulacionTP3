@@ -1,4 +1,5 @@
 ﻿using SimulacionTP3.Modelo;
+using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 using System;
 
@@ -14,6 +15,8 @@ namespace SimulacionTP3.Servicios
 
         protected abstract double[] GenerarSerie(Generador generador, int cantidad);
         protected abstract void PedirDatos();
+        protected abstract IDistribucion GetDistribucion();
+
 
         public GestorGenerador(FrmGenerador formulario)
         {
@@ -112,7 +115,9 @@ namespace SimulacionTP3.Servicios
 
         public void ProbarGenerador()
         {
-
+            GestorPruebaBondad pruebaBondad = new GestorPruebaBondad();
+            pruebaBondad.SetDistribucion(GetDistribucion());
+            pruebaBondad.CalcularPrueba(serie, conteo);
         }
     }
 }

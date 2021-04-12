@@ -19,10 +19,15 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             Hide();
         }
 
-        private void FrmBase_FormClosing(object sender, FormClosingEventArgs e)
+        private void EnCierre(object sender, FormClosingEventArgs e)
         {
             if (anterior != null)
                 anterior.Show();
+        }
+
+        public void AbrirDialogo(Form formulario)
+        {
+            formulario.ShowDialog();
         }
 
         public void MostrarError(string mensaje)
