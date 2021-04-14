@@ -1,5 +1,4 @@
-﻿using SimulacionTP3.Modelo;
-using SimulacionTP3.Servicios;
+﻿using SimulacionTP3.Servicios.GestoresGenerador;
 using System;
 
 namespace SimulacionTP3.Presentacion.FormulariosPadre
@@ -7,10 +6,6 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
     public partial class FrmGenerador : FrmBase
     {
         protected GestorGenerador gestor;
-
-        protected virtual void LimpiarDatos()
-        {
-        }
 
         public FrmGenerador()
         {
@@ -21,7 +16,6 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
         {
             gestor.Generar();
         }
-
 
         private void ClickBtnProbar(object sender, EventArgs e)
         {
@@ -52,15 +46,23 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             txtSerie.Clear();
         }
 
-        public void MostrarGrafico(ConteoFrecuencia[] conteos)
+        public void MostrarGrafico(double x, double y)
         {
-            foreach (ConteoFrecuencia conteo in conteos)
-                grafica.Series["Numeros"].Points.AddXY(conteo.Hasta, conteo.Cantidad);
+            grafica.Series["Numeros"].Points.AddXY(x, y);
         }
 
         public void MostrarSerie(string serie)
         {
             txtSerie.Text = serie;
+        }
+
+        protected virtual void LimpiarDatos()
+        {
+        }
+
+        public void HabilitarPrueba(bool habilitar)
+        {
+            btnProbar.Enabled = habilitar;
         }
     }
 }

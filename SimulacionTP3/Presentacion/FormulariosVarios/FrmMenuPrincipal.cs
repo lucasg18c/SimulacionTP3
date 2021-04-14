@@ -1,7 +1,8 @@
-﻿using SimulacionTP3.Presentacion.FormulariosPadre;
+﻿using SimulacionTP3.Presentacion.FormulariosGenerador;
+using SimulacionTP3.Presentacion.FormulariosPadre;
 using System;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosVarios
 {
     public partial class FrmMenuPrincipal : FrmBase
     {

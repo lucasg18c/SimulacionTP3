@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosVarios
 {
     public partial class FrmPruebaBondad : Form
     {
@@ -23,7 +23,22 @@ namespace SimulacionTP3.Presentacion
 
         public void MostrarConclusion(string conclusion)
         {
-            lblCOnclusion.Text = conclusion;
+            lblConclusion.Text = conclusion;
+        }
+
+        public void MostrarEstadisticoPrueba(string v)
+        {
+            lblEstadistico.Text = v;
+        }
+
+        public void MostrarValorCritico(string v)
+        {
+            lblValorCritico.Text = v;
+        }
+
+        public void MostrarNombrePrueba(string v)
+        {
+            lblPruebaBondad.Text = v;
         }
     }
 }

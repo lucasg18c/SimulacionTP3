@@ -1,5 +1,5 @@
 ﻿
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosVarios
 {
     partial class FrmMenuPrincipal
     {
@@ -231,7 +231,7 @@ namespace SimulacionTP3.Presentacion
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimizeBox = false;
             this.Name = "FrmMenuPrincipal";
-            this.Text = "TP3";
+            this.Text = "TP3 Simulación | Cosci - Folli - Lerda - Lozada - Reartes - Slavik";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.Menu.ResumeLayout(false);

@@ -1,4 +1,4 @@
-﻿namespace SimulacionTP3.Presentacion
+﻿namespace SimulacionTP3.Presentacion.FormulariosGenerador
 {
     partial class FrmUniforme
     {
@@ -75,6 +75,7 @@
             this.txtA.ShortcutsEnabled = false;
             this.txtA.Size = new System.Drawing.Size(153, 25);
             this.txtA.TabIndex = 3;
+            this.txtA.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
             // 
             // labelA
             // 
@@ -102,6 +103,7 @@
             this.txtB.ShortcutsEnabled = false;
             this.txtB.Size = new System.Drawing.Size(153, 25);
             this.txtB.TabIndex = 5;
+            this.txtB.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
             // 
             // FrmUniforme
             // 

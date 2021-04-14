@@ -14,7 +14,12 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             0, 0, 0, 43.8, 55.8, 67.5, 79.1, 90.5, 101.9, 113.1, 124.3
         };
 
-        public double[] CalcularFila(ConteoFrecuencia conteo, double frecuenciaEsperada, double[] filaAnterior)
+        public bool AgruparFrecuenciasEsperadas()
+        {
+            return true;
+        }
+
+        public double[] CalcularFila(ConteoFrecuencia conteo, double frecuenciaEsperada, double[] filaAnterior, int tamanioMuestra)
         {
             double[] fila = new double[6];
 

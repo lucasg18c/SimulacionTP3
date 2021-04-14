@@ -1,4 +1,6 @@
-﻿namespace SimulacionTP3.Modelo.Distribuciones
+﻿using SimulacionTP3.Modelo.PruebasBondad;
+
+namespace SimulacionTP3.Modelo.Distribuciones
 {
     public class Uniforme : IDistribucion
     {
@@ -11,11 +13,10 @@
             k = conteos.Length;
             n = serie.Length;
             frecuencias = new double[k];
-
-            fe = n / (conteos[k - 1].Hasta - conteos[0].Desde);
+            fe = (double)n / k;
 
             for (int i = 0; i < k; i++)
-                frecuencias[i] = fe;
+                frecuencias[i] = fe;                
 
             return frecuencias;
         }
@@ -28,6 +29,13 @@
         public string GetNombre()
         {
             return "Uniforme";
+        }
+        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
+        {
+            if (tamanioMuestra >= 30)
+                return new PruebaChiCuadrado();
+            else
+                return new PruebaKS();
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using SimulacionTP3.Modelo;
 using SimulacionTP3.Modelo.Distribuciones;
-using SimulacionTP3.Presentacion;
+using SimulacionTP3.Presentacion.FormulariosGenerador;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 
-namespace SimulacionTP3.Servicios
+namespace SimulacionTP3.Servicios.GestoresGenerador
 {
     public class GestorConvolucion : GestorGenerador
     {
@@ -29,6 +29,10 @@ namespace SimulacionTP3.Servicios
         protected override IDistribucion GetDistribucion()
         {
             return new Normal();
+        }
+
+        protected override void ValidarDatos()
+        {
         }
     }
 }

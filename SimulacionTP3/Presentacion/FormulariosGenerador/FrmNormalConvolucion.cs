@@ -1,7 +1,7 @@
 ﻿using SimulacionTP3.Presentacion.FormulariosPadre;
-using SimulacionTP3.Servicios;
+using SimulacionTP3.Servicios.GestoresGenerador;
 
-namespace SimulacionTP3.Presentacion
+namespace SimulacionTP3.Presentacion.FormulariosGenerador
 {
     public partial class FrmNormalConvolucion : FrmGenerador
     {

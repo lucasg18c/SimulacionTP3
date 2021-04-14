@@ -64,10 +64,10 @@
     <Compile Include="Presentacion\FormulariosPadre\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmExponencial.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmExponencial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmExponencial.Designer.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmExponencial.Designer.cs">
       <DependentUpon>FrmExponencial.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FormulariosPadre\FrmGenerador.cs">
@@ -76,78 +76,78 @@
     <Compile Include="Presentacion\FormulariosPadre\FrmGenerador.Designer.cs">
       <DependentUpon>FrmGenerador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmMenuPrincipal.cs">
+    <Compile Include="Presentacion\FormulariosVarios\FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmMenuPrincipal.Designer.cs">
+    <Compile Include="Presentacion\FormulariosVarios\FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\ConteoFrecuencia.cs" />
     <Compile Include="Modelo\Generador.cs" />
-    <Compile Include="Presentacion\FrmNormalBM.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmNormalBM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmNormalBM.Designer.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmNormalBM.Designer.cs">
       <DependentUpon>FrmNormalBM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmNormalConvolucion.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmNormalConvolucion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmNormalConvolucion.Designer.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmNormalConvolucion.Designer.cs">
       <DependentUpon>FrmNormalConvolucion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPoisson.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmPoisson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPoisson.Designer.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmPoisson.Designer.cs">
       <DependentUpon>FrmPoisson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPruebaBondad.cs">
+    <Compile Include="Presentacion\FormulariosVarios\FrmPruebaBondad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPruebaBondad.Designer.cs">
+    <Compile Include="Presentacion\FormulariosVarios\FrmPruebaBondad.Designer.cs">
       <DependentUpon>FrmPruebaBondad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmUniforme.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmUniforme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmUniforme.Designer.cs">
+    <Compile Include="Presentacion\FormulariosGenerador\FrmUniforme.Designer.cs">
       <DependentUpon>FrmUniforme.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicios\GestorConvolucion.cs" />
-    <Compile Include="Servicios\GestorExponencial.cs" />
-    <Compile Include="Servicios\GestorGenerador.cs" />
-    <Compile Include="Servicios\GestorNormalBM.cs" />
-    <Compile Include="Servicios\GestorPoisson.cs" />
-    <Compile Include="Servicios\GestorPruebaBondad.cs" />
-    <Compile Include="Servicios\GestorUniforme.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorConvolucion.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorExponencial.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorGenerador.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorNormalBM.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorPoisson.cs" />
+    <Compile Include="Servicios\GestoresPruebaBondad\GestorPruebaBondad.cs" />
+    <Compile Include="Servicios\GestoresGenerador\GestorUniforme.cs" />
     <EmbeddedResource Include="Presentacion\FormulariosPadre\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmExponencial.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosGenerador\FrmExponencial.resx">
       <DependentUpon>FrmExponencial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormulariosPadre\FrmGenerador.resx">
       <DependentUpon>FrmGenerador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmMenuPrincipal.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosVarios\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmNormalBM.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosGenerador\FrmNormalBM.resx">
       <DependentUpon>FrmNormalBM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmNormalConvolucion.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosGenerador\FrmNormalConvolucion.resx">
       <DependentUpon>FrmNormalConvolucion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPoisson.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosGenerador\FrmPoisson.resx">
       <DependentUpon>FrmPoisson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPruebaBondad.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosVarios\FrmPruebaBondad.resx">
       <DependentUpon>FrmPruebaBondad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmUniforme.resx">
+    <EmbeddedResource Include="Presentacion\FormulariosGenerador\FrmUniforme.resx">
       <DependentUpon>FrmUniforme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -174,7 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Bibliotecas\" />
-    <Folder Include="Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

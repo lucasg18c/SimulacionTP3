@@ -1,9 +1,10 @@
 ﻿using SimulacionTP3.Modelo;
 using SimulacionTP3.Modelo.Distribuciones;
-using SimulacionTP3.Presentacion;
+using SimulacionTP3.Presentacion.FormulariosGenerador;
 using SimulacionTP3.Presentacion.FormulariosPadre;
+using System;
 
-namespace SimulacionTP3.Servicios
+namespace SimulacionTP3.Servicios.GestoresGenerador
 {
     public class GestorUniforme : GestorGenerador
     {
@@ -28,6 +29,12 @@ namespace SimulacionTP3.Servicios
         protected override IDistribucion GetDistribucion()
         {
             return new Uniforme();
+        }
+
+        protected override void ValidarDatos()
+        {
+            if (a >= b)
+                throw new ApplicationException("A debe ser menor que B.");
         }
     }
 }

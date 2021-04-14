@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimulacionTP3.Modelo.PruebasBondad;
+using System;
 
 namespace SimulacionTP3.Modelo.Distribuciones
 {
@@ -60,5 +61,14 @@ namespace SimulacionTP3.Modelo.Distribuciones
         {
             return 2;
         }
+
+        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
+        {
+            if (tamanioMuestra >= 30)
+                return new PruebaChiCuadrado();
+            else
+                return new PruebaKS();
+        }
+    
     }
 }

@@ -78,6 +78,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.txtCantidad.ShortcutsEnabled = false;
             this.txtCantidad.Size = new System.Drawing.Size(153, 25);
             this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
             // 
             // lblIntervalos
             // 
@@ -96,6 +97,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.txtIntervalos.ShortcutsEnabled = false;
             this.txtIntervalos.Size = new System.Drawing.Size(153, 25);
             this.txtIntervalos.TabIndex = 1;
+            this.txtIntervalos.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
             // 
             // btnGenerar
             // 
@@ -119,6 +121,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             // 
             // btnProbar
             // 
+            this.btnProbar.Enabled = false;
             this.btnProbar.Location = new System.Drawing.Point(723, 376);
             this.btnProbar.Name = "btnProbar";
             this.btnProbar.Size = new System.Drawing.Size(110, 49);
@@ -145,6 +148,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.grafica.Legends.Add(legend1);
             this.grafica.Location = new System.Drawing.Point(260, 24);
             this.grafica.Name = "grafica";
+            this.grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Numeros";

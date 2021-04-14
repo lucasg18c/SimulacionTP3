@@ -1,20 +1,22 @@
 ﻿using SimulacionTP3.Modelo;
 using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion.FormulariosPadre;
+using SimulacionTP3.Servicios.GestoresPruebaBondad;
 using System;
 
-namespace SimulacionTP3.Servicios
+namespace SimulacionTP3.Servicios.GestoresGenerador
 {
     public abstract class GestorGenerador
     {
         private readonly FrmGenerador formulario;
         private readonly Generador generador;
         private double[] serie;
-        private ConteoFrecuencia[] conteo;
+        private ConteoFrecuencia[] conteos;
         private int intervalos, cantidad;
 
         protected abstract double[] GenerarSerie(Generador generador, int cantidad);
         protected abstract void PedirDatos();
+        protected abstract void ValidarDatos();
         protected abstract IDistribucion GetDistribucion();
 
 
@@ -28,20 +30,43 @@ namespace SimulacionTP3.Servicios
         {
             try
             {
+                formulario.HabilitarPrueba(false);
+
                 intervalos = formulario.GetIntervalos();
                 cantidad = formulario.GetCantidad();
                 PedirDatos();
+                Validar();
+
                 serie = GenerarSerie(generador, cantidad);
                 ConteoFrecuencias();
                 
                 formulario.Limpiar();
-                formulario.MostrarGrafico(conteo);
+                MostrarGrafico();
                 formulario.MostrarSerie(MostrarSerie());
+
+                formulario.HabilitarPrueba(true);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 formulario.MostrarError(ex);
             }
+        }
+
+        private void Validar()
+        {
+            ValidarDatos();
+
+            if (cantidad <= 1)
+                throw new ApplicationException("Ingresar una cantidad mayor que uno.");
+        }
+
+        private void MostrarGrafico()
+        {
+            foreach (ConteoFrecuencia conteo in conteos)
+                formulario.MostrarGrafico(
+                    Math.Round(conteo.Hasta, 4),
+                    conteo.Cantidad
+                    );
         }
 
         private string MostrarSerie()
@@ -50,18 +75,33 @@ namespace SimulacionTP3.Servicios
             for (int i = 0; i < cantidad; i++)
             {
                 serieStr += Math.Round(serie[i], 4).ToString();
-                if (i < cantidad - 1)
-                    serieStr += " - ";
+                serieStr += "\t";
             }
-
             return serieStr;
         }
 
-        // TODO: ARREGLAR
+        /* 
+         * Realiza el conteo de frecuencias con dos pasadas sobre la serie de números aleatorios,
+         * organizándolos en un array de ConteoFrecuencia.
+         * 
+         * En la primera pasada se identifican el mayor y menor valor.
+         * En la segunda se identifica el intervalo a incrementar, contando en los objetos ConteoFrecuencia.
+         * Para determinar el intervalo (posición en el array) se utiliza las siguientes fórmulas:
+         * 
+         * posicion (p): 0, 1, 2, 3 ...
+         * serie { d [double] / min <= d <= max }
+         * anchoIntervalo (t) = (max - min) / 2
+         * 
+         * d = min + t * p     se despeja la posición
+         * p = d/t - min/t
+         * 
+         * p = Truncar( A * d + B )       donde: A = 1/t   B = -min/t
+         * 
+         */
         private void ConteoFrecuencias()
         {
             int posicion;
-            double anchoIntervalo, mayor, menor, inicioIntervalo;
+            double anchoIntervalo, mayor, menor, inicioIntervalo, A, B;
 
             if (intervalos == 0)
                 intervalos = (int) Math.Sqrt(cantidad);
@@ -73,24 +113,15 @@ namespace SimulacionTP3.Servicios
                 if (d < menor) menor = d;
                 if (d > mayor) mayor = d;
             }
-            menor = Math.Truncate(menor);
-            mayor = Math.Ceiling(mayor);
 
             anchoIntervalo = (mayor - menor) / intervalos;
-
-            if (anchoIntervalo * intervalos < menor)
-            {
-                menor = (menor + anchoIntervalo * intervalos) / 2;
-                anchoIntervalo = (mayor - menor) / intervalos;
-            }
-
-            conteo = new ConteoFrecuencia[intervalos];
+            conteos = new ConteoFrecuencia[intervalos];
 
             for (int i = 0; i < intervalos; i++)
             {
                 inicioIntervalo = menor + i * anchoIntervalo;
 
-                conteo[i] = new ConteoFrecuencia
+                conteos[i] = new ConteoFrecuencia
                 {
                     Desde = inicioIntervalo,
                     Hasta = inicioIntervalo + anchoIntervalo,
@@ -98,13 +129,18 @@ namespace SimulacionTP3.Servicios
                 };
             }
 
+            A = 1 / anchoIntervalo;
+            B = -menor / anchoIntervalo;
+
             foreach (double d in serie)
             {
-                posicion = (int)(d / anchoIntervalo);
-                //Console.WriteLine($"min: {menor} may: {mayor} d: {d}  ancho: {anchoIntervalo}  cantida intervalos: {intervalos}  pos: {posicion}");
+                posicion = (int) (A * d + B);
+
+                // para incluir el valor mayor y evitar errores
                 if (posicion >= intervalos)
-                    posicion -= intervalos;
-                conteo[posicion].Contar();
+                    posicion = intervalos - 1;
+
+                conteos[posicion].Contar();
             }
         }
 
@@ -117,7 +153,7 @@ namespace SimulacionTP3.Servicios
         {
             GestorPruebaBondad pruebaBondad = new GestorPruebaBondad();
             pruebaBondad.SetDistribucion(GetDistribucion());
-            pruebaBondad.CalcularPrueba(serie, conteo);
+            pruebaBondad.CalcularPrueba(serie, conteos);
         }
     }
 }

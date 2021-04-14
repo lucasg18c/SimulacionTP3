@@ -1,4 +1,4 @@
-﻿namespace SimulacionTP3.Presentacion
+﻿namespace SimulacionTP3.Presentacion.FormulariosGenerador
 {
     partial class FrmNormalBM
     {
@@ -74,6 +74,7 @@
             this.txtMedia.ShortcutsEnabled = false;
             this.txtMedia.Size = new System.Drawing.Size(153, 25);
             this.txtMedia.TabIndex = 5;
+            this.txtMedia.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             this.txtDesviacion.ShortcutsEnabled = false;
             this.txtDesviacion.Size = new System.Drawing.Size(153, 25);
             this.txtDesviacion.TabIndex = 7;
+            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
             // 
             // FrmNormalBM
             // 

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using SimulacionTP3.Modelo.PruebasBondad;
+using System;
 
 namespace SimulacionTP3.Modelo.Distribuciones
 {
     public class Poisson : IDistribucion
     {
-        private int ultimoFactorial = 1;
         public double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
         {
             int marcaClase, anchoIntervalo, media, k, n;
@@ -26,18 +26,7 @@ namespace SimulacionTP3.Modelo.Distribuciones
 
         private int Factorial(int n)
         {
-            if (ultimoFactorial == 1)
-                ultimoFactorial = FactorialLento(n);
-
-            else
-                ultimoFactorial *= n;
-
-            return ultimoFactorial;
-        }
-
-        private int FactorialLento(int n)
-        {
-            if (n == 1)
+            if (n == 0)
                 return 1;
             return n * Factorial(n - 1);
         }
@@ -62,6 +51,11 @@ namespace SimulacionTP3.Modelo.Distribuciones
         public int GetDatosEmpiricos()
         {
             return 1;
+        }
+
+        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
+        {
+            return new PruebaChiCuadrado();
         }
     }
 }

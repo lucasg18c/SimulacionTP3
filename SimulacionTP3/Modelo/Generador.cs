@@ -5,11 +5,16 @@ namespace SimulacionTP3.Modelo
     public class Generador
     {
         private double[] serie;
-        private readonly Random random;
+        private readonly Random r;
 
         public Generador()
         {
-            random = new Random();
+            r = new Random();
+        }
+
+        public double Random() 
+        {
+            return r.NextDouble();
         }
 
         public double[] GenerarUniforme(double a, double b, int cantidad)
@@ -17,7 +22,7 @@ namespace SimulacionTP3.Modelo
             serie = new double[cantidad];
 
             for (int i = 0; i < cantidad; i++)
-                serie[i] = a + random.NextDouble() * (b - a);
+                serie[i] = a + Random() * (b - a);
 
             return serie;
         }
@@ -28,7 +33,7 @@ namespace SimulacionTP3.Modelo
             serie = new double[cantidad];
 
             for (int i = 0; i < cantidad; i++)
-                serie[i] = multiplicar * Math.Log(1 - random.NextDouble());
+                serie[i] = multiplicar * Math.Log(1 - Random());
 
             return serie;
         }
@@ -47,7 +52,7 @@ namespace SimulacionTP3.Modelo
 
                 do
                 {
-                    p *= random.NextDouble();
+                    p *= Random();
                     x++;
 
                 } while (p >= a);
@@ -65,8 +70,8 @@ namespace SimulacionTP3.Modelo
 
             for (int i = 0; i < cantidad; i += 2)
             {
-                rnd1 = random.NextDouble();
-                rnd2 = random.NextDouble();
+                rnd1 = Random();
+                rnd2 = Random();
 
                 temp1 = Math.Sqrt(-2 * Math.Log(rnd1));
                 temp2 = 2 * Math.PI * rnd2;
@@ -91,7 +96,7 @@ namespace SimulacionTP3.Modelo
             {
                 suma = -6;
                 for (int j = 0; j < 12; j++)
-                    suma += random.NextDouble();
+                    suma += Random();
 
                 serie[i] = suma * desviacion + media;
             }

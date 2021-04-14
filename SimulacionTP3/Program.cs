@@ -1,4 +1,4 @@
-﻿using SimulacionTP3.Presentacion;
+﻿using SimulacionTP3.Presentacion.FormulariosVarios;
 using System;
 using System.Windows.Forms;
 
