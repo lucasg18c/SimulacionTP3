@@ -13,12 +13,12 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         private double[] serie;
         private ConteoFrecuencia[] conteos;
         private int intervalos, cantidad;
+        private Distribucion distribucion;
 
         protected abstract double[] GenerarSerie(Generador generador, int cantidad);
         protected abstract void PedirDatos();
         protected abstract void ValidarDatos();
-        protected abstract IDistribucion GetDistribucion();
-
+        protected abstract Distribucion GetDistribucion();
 
         public GestorGenerador(FrmGenerador formulario)
         {
@@ -34,12 +34,13 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
 
                 intervalos = formulario.GetIntervalos();
                 cantidad = formulario.GetCantidad();
+                distribucion = GetDistribucion();
                 PedirDatos();
                 Validar();
 
                 serie = GenerarSerie(generador, cantidad);
-                ConteoFrecuencias();
-                
+                conteos = ContadorFrecuencias.Contar(serie, intervalos, distribucion.IntervalosEnteros());
+
                 formulario.Limpiar();
                 MostrarGrafico();
                 formulario.MostrarSerie(MostrarSerie());
@@ -80,70 +81,6 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
             return serieStr;
         }
 
-        /* 
-         * Realiza el conteo de frecuencias con dos pasadas sobre la serie de números aleatorios,
-         * organizándolos en un array de ConteoFrecuencia.
-         * 
-         * En la primera pasada se identifican el mayor y menor valor.
-         * En la segunda se identifica el intervalo a incrementar, contando en los objetos ConteoFrecuencia.
-         * Para determinar el intervalo (posición en el array) se utiliza las siguientes fórmulas:
-         * 
-         * posicion (p): 0, 1, 2, 3 ...
-         * serie { d [double] / min <= d <= max }
-         * anchoIntervalo (t) = (max - min) / 2
-         * 
-         * d = min + t * p     se despeja la posición
-         * p = d/t - min/t
-         * 
-         * p = Truncar( A * d + B )       donde: A = 1/t   B = -min/t
-         * 
-         */
-        private void ConteoFrecuencias()
-        {
-            int posicion;
-            double anchoIntervalo, mayor, menor, inicioIntervalo, A, B;
-
-            if (intervalos == 0)
-                intervalos = (int) Math.Sqrt(cantidad);
-
-            mayor = menor = serie[0];
-
-            foreach (double d in serie)
-            {
-                if (d < menor) menor = d;
-                if (d > mayor) mayor = d;
-            }
-
-            anchoIntervalo = (mayor - menor) / intervalos;
-            conteos = new ConteoFrecuencia[intervalos];
-
-            for (int i = 0; i < intervalos; i++)
-            {
-                inicioIntervalo = menor + i * anchoIntervalo;
-
-                conteos[i] = new ConteoFrecuencia
-                {
-                    Desde = inicioIntervalo,
-                    Hasta = inicioIntervalo + anchoIntervalo,
-                    Cantidad = 0
-                };
-            }
-
-            A = 1 / anchoIntervalo;
-            B = -menor / anchoIntervalo;
-
-            foreach (double d in serie)
-            {
-                posicion = (int) (A * d + B);
-
-                // para incluir el valor mayor y evitar errores
-                if (posicion >= intervalos)
-                    posicion = intervalos - 1;
-
-                conteos[posicion].Contar();
-            }
-        }
-
         public void Limpiar()
         {
             formulario.Limpiar();
@@ -151,9 +88,20 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
 
         public void ProbarGenerador()
         {
-            GestorPruebaBondad pruebaBondad = new GestorPruebaBondad();
-            pruebaBondad.SetDistribucion(GetDistribucion());
-            pruebaBondad.CalcularPrueba(serie, conteos);
+            try
+            {
+                new GestorPruebaBondad(serie, conteos, distribucion).CalcularPrueba();
+            }
+            catch(ApplicationException ex)
+            {
+                formulario.MostrarError(ex);
+            }
+            catch(Exception)
+            {
+                //formulario.MostrarError(ex);
+                formulario.MostrarError("Ocurrió un error al calcular la prueba de bondad." +
+                    "\nPor favor, utilice un tamaño de muestra diferente.");
+            }
         }
     }
 }

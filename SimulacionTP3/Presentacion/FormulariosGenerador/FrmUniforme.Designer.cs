@@ -35,15 +35,6 @@
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblIntervalos
-            // 
-            this.lblIntervalos.Location = new System.Drawing.Point(25, 210);
-            // 
-            // txtIntervalos
-            // 
-            this.txtIntervalos.Location = new System.Drawing.Point(28, 231);
-            this.txtIntervalos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            // 
             // gbDatos
             // 
             this.gbDatos.Controls.Add(this.label1);
@@ -52,8 +43,6 @@
             this.gbDatos.Controls.Add(this.txtA);
             this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
             this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtIntervalos, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblIntervalos, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtA, 0);
             this.gbDatos.Controls.SetChildIndex(this.labelA, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtB, 0);

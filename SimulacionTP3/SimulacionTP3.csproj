@@ -48,11 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelo\Distribuciones\Exponencial.cs" />
-    <Compile Include="Modelo\Distribuciones\IDistribucion.cs" />
+    <Compile Include="Modelo\Distribuciones\Distribucion.cs" />
     <Compile Include="Modelo\Distribuciones\Normal.cs" />
     <Compile Include="Modelo\Distribuciones\Poisson.cs" />
     <Compile Include="Modelo\Distribuciones\Uniforme.cs" />
-    <Compile Include="Modelo\PruebasBondad\IPruebaBondad.cs" />
+    <Compile Include="Modelo\PruebasBondad\PruebaBondad.cs" />
     <Compile Include="Modelo\PruebasBondad\PruebaChiCuadrado.cs" />
     <Compile Include="Modelo\PruebasBondad\PruebaKS.cs" />
     <Compile Include="Presentacion\ControlesUsuario\NumTextBox.cs">
@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ContadorFrecuencias.cs" />
     <Compile Include="Servicios\GestoresGenerador\GestorConvolucion.cs" />
     <Compile Include="Servicios\GestoresGenerador\GestorExponencial.cs" />
     <Compile Include="Servicios\GestoresGenerador\GestorGenerador.cs" />

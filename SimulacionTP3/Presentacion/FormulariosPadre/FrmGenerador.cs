@@ -26,7 +26,10 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
         {
             gestor.Limpiar();
             txtCantidad.Clear();
-            txtIntervalos.Clear();
+            rb5.Checked = false;
+            rb10.Checked = true;
+            rb15.Checked = false;
+            rb20.Checked = false;
             LimpiarDatos();
         }
 
@@ -37,7 +40,10 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
 
         public int GetIntervalos()
         {
-            return (int) txtIntervalos.Valor;
+            if (rb5.Checked) return 5; 
+            if (rb10.Checked) return 10; 
+            if (rb15.Checked) return 15; 
+            else return 20; 
         }
 
         public void Limpiar()

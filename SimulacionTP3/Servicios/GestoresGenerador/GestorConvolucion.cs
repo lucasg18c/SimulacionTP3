@@ -26,7 +26,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
             desviacion = frmConvolucion.GetDesviacion();
         }
 
-        protected override IDistribucion GetDistribucion()
+        protected override Distribucion GetDistribucion()
         {
             return new Normal();
         }

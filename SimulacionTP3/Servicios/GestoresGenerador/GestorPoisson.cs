@@ -7,7 +7,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
 {
     public class GestorPoisson : GestorGenerador
     {
-        private double frecuencia;
+        private double media;
         private readonly FrmPoisson frmPoisson;
 
         public GestorPoisson(FrmGenerador formulario) : base(formulario)
@@ -17,15 +17,15 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
 
         protected override double[] GenerarSerie(Generador generador, int cantidad)
         {
-            return generador.GenerarPoisson(frecuencia, cantidad);
+            return generador.GenerarPoisson(media, cantidad);
         }
 
         protected override void PedirDatos()
         {
-            frecuencia = frmPoisson.GetFrecuencia();
+            media = frmPoisson.GetMedia();
         }
 
-        protected override IDistribucion GetDistribucion()
+        protected override Distribucion GetDistribucion()
         {
             return new Poisson();
         }

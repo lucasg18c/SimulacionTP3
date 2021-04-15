@@ -2,7 +2,7 @@
 
 namespace SimulacionTP3.Modelo.PruebasBondad
 {
-    public class PruebaKS : IPruebaBondad
+    public class PruebaKS : PruebaBondad
     {
         private static readonly double[] valCriticos = {
             0.9750, 0.8418, 0.7076, 0.6239, 0.5632, 0.5192, 0.4834, 0.4542, 0.4300,
@@ -11,18 +11,18 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             0.2499, 0.2457, 0.2417, 0.2378, 0.2342, 0.2307, 0.2274, 0.2242
         };
 
-        public bool AgruparFrecuenciasEsperadas()
+        protected override bool AgruparFrecuenciasEsperadas()
         {
             return false;
         }
 
-        public double[] CalcularFila(ConteoFrecuencia conteo, double frecuenciaEsperada, double[] filaAnterior, int tamanioMuestra)
+        protected override double[] CalcularFila(double desde, double hasta, double frecuenciaObservada, double frecuenciaEsperada, int tamanioMuestra, double[] filaAnterior)
         {
             double[] fila = new double[10];
 
-            fila[0] = conteo.Desde;
-            fila[1] = conteo.Hasta;
-            fila[2] = conteo.Cantidad;
+            fila[0] = desde;
+            fila[1] = hasta;
+            fila[2] = frecuenciaObservada;
             fila[3] = frecuenciaEsperada;
             fila[4] = fila[2] / tamanioMuestra;
             fila[5] = frecuenciaEsperada / tamanioMuestra;
@@ -44,7 +44,7 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             return fila;
         }
 
-        public double CalcularValorCritico(int cantidadIntervalos, int tamanioMuestra, int datosEmpiricos)
+        protected override double CalcularValorCritico(int cantidadIntervalos, int tamanioMuestra, int datosEmpiricos)
         {
             if (tamanioMuestra > 35)
                 return Math.Round(1.36 / Math.Sqrt(tamanioMuestra), 4);
@@ -52,7 +52,7 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             return valCriticos[tamanioMuestra - 1];
         }
 
-        public string[] GetColumnasProcedimiento()
+        public override string[] GetColumnasProcedimiento(bool intervalosEnteros)
         {
             return new string[] { 
                 "Desde",
@@ -68,7 +68,7 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             };
         }
 
-        public string GetNombre()
+        public override string GetNombre()
         {
             return "Kolmogorov - Smirnov";
         }

@@ -3,28 +3,26 @@ using System;
 
 namespace SimulacionTP3.Modelo.Distribuciones
 {
-    public class Poisson : IDistribucion
+    public class Poisson : Distribucion
     {
-        public double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
+        public override double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
         {
-            int marcaClase, anchoIntervalo, media, k, n;
+            int media, k, n;
             double[] frecuencias;
 
             k = conteos.Length;
             n = serie.Length;
             media = CalcularMedia(serie);
             frecuencias = new double[k];
-            anchoIntervalo = (int) (conteos[0].Hasta - conteos[0].Desde);
 
             for (int i = 0; i < k; i++)
             {
-                marcaClase = (int) ((conteos[i].Hasta + conteos[i].Desde) / 2);
-                frecuencias[i] = (int) (n * anchoIntervalo * Math.Pow(media, marcaClase) * Math.Exp(-media) / Factorial(marcaClase));
+                frecuencias[i] = Math.Round(n * Math.Pow(media, conteos[i].Desde) * Math.Exp(-media) / Factorial(conteos[i].Desde));
             }
             return frecuencias;
         }
 
-        private int Factorial(int n)
+        private double Factorial(double n)
         {
             if (n == 0)
                 return 1;
@@ -43,17 +41,22 @@ namespace SimulacionTP3.Modelo.Distribuciones
             return suma / n;
         }
 
-        public string GetNombre()
+        public override string GetNombre()
         {
             return "Poisson";
         }
 
-        public int GetDatosEmpiricos()
+        public override bool IntervalosEnteros()
+        {
+            return true;
+        }
+
+        public override int CantidadDatosEmpiricos()
         {
             return 1;
         }
 
-        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
+        public override PruebaBondad ElegirPruebaBondad(int tamanioMuestra)
         {
             return new PruebaChiCuadrado();
         }

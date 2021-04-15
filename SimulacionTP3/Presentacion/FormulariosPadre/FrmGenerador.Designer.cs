@@ -34,25 +34,28 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.gbIntervalos = new System.Windows.Forms.GroupBox();
+            this.rb20 = new System.Windows.Forms.RadioButton();
+            this.rb15 = new System.Windows.Forms.RadioButton();
+            this.rb10 = new System.Windows.Forms.RadioButton();
+            this.rb5 = new System.Windows.Forms.RadioButton();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.lblIntervalos = new System.Windows.Forms.Label();
-            this.txtIntervalos = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnProbar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gbDatos.SuspendLayout();
+            this.gbIntervalos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.gbIntervalos);
             this.gbDatos.Controls.Add(this.lblCantidad);
             this.gbDatos.Controls.Add(this.txtCantidad);
-            this.gbDatos.Controls.Add(this.lblIntervalos);
-            this.gbDatos.Controls.Add(this.txtIntervalos);
             this.gbDatos.Controls.Add(this.btnGenerar);
             this.gbDatos.Location = new System.Drawing.Point(12, 14);
             this.gbDatos.Name = "gbDatos";
@@ -60,6 +63,61 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos";
+            // 
+            // gbIntervalos
+            // 
+            this.gbIntervalos.Controls.Add(this.rb20);
+            this.gbIntervalos.Controls.Add(this.rb15);
+            this.gbIntervalos.Controls.Add(this.rb10);
+            this.gbIntervalos.Controls.Add(this.rb5);
+            this.gbIntervalos.Location = new System.Drawing.Point(15, 204);
+            this.gbIntervalos.Name = "gbIntervalos";
+            this.gbIntervalos.Size = new System.Drawing.Size(198, 77);
+            this.gbIntervalos.TabIndex = 5;
+            this.gbIntervalos.TabStop = false;
+            this.gbIntervalos.Text = "Intervalos (gráfico)";
+            // 
+            // rb20
+            // 
+            this.rb20.AutoSize = true;
+            this.rb20.Location = new System.Drawing.Point(151, 34);
+            this.rb20.Name = "rb20";
+            this.rb20.Size = new System.Drawing.Size(40, 21);
+            this.rb20.TabIndex = 3;
+            this.rb20.Text = "20";
+            this.rb20.UseVisualStyleBackColor = true;
+            // 
+            // rb15
+            // 
+            this.rb15.AutoSize = true;
+            this.rb15.Location = new System.Drawing.Point(101, 34);
+            this.rb15.Name = "rb15";
+            this.rb15.Size = new System.Drawing.Size(38, 21);
+            this.rb15.TabIndex = 2;
+            this.rb15.Text = "15";
+            this.rb15.UseVisualStyleBackColor = true;
+            // 
+            // rb10
+            // 
+            this.rb10.AutoSize = true;
+            this.rb10.Checked = true;
+            this.rb10.Location = new System.Drawing.Point(51, 34);
+            this.rb10.Name = "rb10";
+            this.rb10.Size = new System.Drawing.Size(38, 21);
+            this.rb10.TabIndex = 1;
+            this.rb10.TabStop = true;
+            this.rb10.Text = "10";
+            this.rb10.UseVisualStyleBackColor = true;
+            // 
+            // rb5
+            // 
+            this.rb5.AutoSize = true;
+            this.rb5.Location = new System.Drawing.Point(6, 34);
+            this.rb5.Name = "rb5";
+            this.rb5.Size = new System.Drawing.Size(33, 21);
+            this.rb5.TabIndex = 0;
+            this.rb5.Text = "5";
+            this.rb5.UseVisualStyleBackColor = true;
             // 
             // lblCantidad
             // 
@@ -80,25 +138,6 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
             // 
-            // lblIntervalos
-            // 
-            this.lblIntervalos.AutoSize = true;
-            this.lblIntervalos.Location = new System.Drawing.Point(12, 208);
-            this.lblIntervalos.Name = "lblIntervalos";
-            this.lblIntervalos.Size = new System.Drawing.Size(112, 17);
-            this.lblIntervalos.TabIndex = 2;
-            this.lblIntervalos.Text = "Intervalos (gráfico)";
-            // 
-            // txtIntervalos
-            // 
-            this.txtIntervalos.Location = new System.Drawing.Point(15, 228);
-            this.txtIntervalos.MaxLength = 6;
-            this.txtIntervalos.Name = "txtIntervalos";
-            this.txtIntervalos.ShortcutsEnabled = false;
-            this.txtIntervalos.Size = new System.Drawing.Size(153, 25);
-            this.txtIntervalos.TabIndex = 1;
-            this.txtIntervalos.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
-            // 
             // btnGenerar
             // 
             this.btnGenerar.Location = new System.Drawing.Point(58, 287);
@@ -116,7 +155,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.ReadOnly = true;
             this.txtSerie.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSerie.Size = new System.Drawing.Size(669, 131);
+            this.txtSerie.Size = new System.Drawing.Size(689, 131);
             this.txtSerie.TabIndex = 1;
             // 
             // btnProbar
@@ -171,6 +210,8 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.Text = "FrmGenerador";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            this.gbIntervalos.ResumeLayout(false);
+            this.gbIntervalos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,10 +224,13 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
         private System.Windows.Forms.Button btnProbar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataVisualization.Charting.Chart grafica;
-        protected System.Windows.Forms.Label lblIntervalos;
-        protected NumTextBox txtIntervalos;
         protected System.Windows.Forms.GroupBox gbDatos;
         protected System.Windows.Forms.Label lblCantidad;
         protected NumTextBox txtCantidad;
+        protected System.Windows.Forms.GroupBox gbIntervalos;
+        protected System.Windows.Forms.RadioButton rb20;
+        protected System.Windows.Forms.RadioButton rb15;
+        protected System.Windows.Forms.RadioButton rb10;
+        protected System.Windows.Forms.RadioButton rb5;
     }
 }

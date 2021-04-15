@@ -12,38 +12,34 @@ namespace SimulacionTP3.Modelo
             r = new Random();
         }
 
-        public double Random() 
-        {
-            return r.NextDouble();
-        }
-
         public double[] GenerarUniforme(double a, double b, int cantidad)
         {
             serie = new double[cantidad];
+            double ancho = b - a;
 
             for (int i = 0; i < cantidad; i++)
-                serie[i] = a + Random() * (b - a);
+                serie[i] = a + r.NextDouble() * ancho;
 
             return serie;
         }
 
-        public double[] GenerarExponencial(double media, double frecuencia, int cantidad)
+        public double[] GenerarExponencial(double media, int cantidad)
         {
-            double multiplicar = media == 0 ? (-1 / frecuencia) : -media;
             serie = new double[cantidad];
+            media *= -1;
 
             for (int i = 0; i < cantidad; i++)
-                serie[i] = multiplicar * Math.Log(1 - Random());
+                serie[i] = media * Math.Log(1 - r.NextDouble());
 
             return serie;
         }
 
-        public double[] GenerarPoisson(double frecuencia, int cantidad)
+        public double[] GenerarPoisson(double media, int cantidad)
         {
             double p, x, a;
 
             serie = new double[cantidad];
-            a = Math.Exp(-frecuencia);
+            a = Math.Exp(-media);
 
             for (int i = 0; i < cantidad; i++)
             {
@@ -52,7 +48,7 @@ namespace SimulacionTP3.Modelo
 
                 do
                 {
-                    p *= Random();
+                    p *= r.NextDouble();
                     x++;
 
                 } while (p >= a);
@@ -65,24 +61,25 @@ namespace SimulacionTP3.Modelo
 
         public double[] GenerarNormalBM(double media, double desviacion, int cantidad)
         {
-            double rnd1, rnd2, n1, n2, temp1, temp2;
+            double temp1, temp2, dosPI;
+            int iteraciones;
+
             serie = new double[cantidad];
+            dosPI = 2 * Math.PI;
+            iteraciones = cantidad % 2 == 0 ? cantidad : cantidad - 1;
 
-            for (int i = 0; i < cantidad; i += 2)
+            for (int i = 0; i < iteraciones; i += 2)
             {
-                rnd1 = Random();
-                rnd2 = Random();
+                temp1 = Math.Sqrt(-2 * Math.Log(r.NextDouble()));
+                temp2 = dosPI * r.NextDouble();
 
-                temp1 = Math.Sqrt(-2 * Math.Log(rnd1));
-                temp2 = 2 * Math.PI * rnd2;
-
-                n1 = temp1 * Math.Cos(temp2) * desviacion + media;
-                n2 = temp1 * Math.Sin(temp2) * desviacion + media;
-
-                serie[i] = n1;
-                if (i + 1 < cantidad)
-                    serie[i + 1] = n2;
+                serie[i] = temp1 * Math.Cos(temp2) * desviacion + media;
+                serie[i + 1] = temp1 * Math.Sin(temp2) * desviacion + media;
             }
+
+            if (cantidad % 2 == 1)
+                serie[cantidad - 1] = Math.Sqrt(-2 * Math.Log(r.NextDouble())) * Math.Cos(dosPI * r.NextDouble()) * desviacion + media;
+            
             return serie;
         }
 
@@ -96,11 +93,10 @@ namespace SimulacionTP3.Modelo
             {
                 suma = -6;
                 for (int j = 0; j < 12; j++)
-                    suma += Random();
+                    suma += r.NextDouble();
 
                 serie[i] = suma * desviacion + media;
             }
-
             return serie;
         }
     }

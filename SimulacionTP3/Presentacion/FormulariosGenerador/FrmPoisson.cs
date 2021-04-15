@@ -11,14 +11,14 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
             gestor = new GestorPoisson(this);
         }
 
-        public double GetFrecuencia()
+        public double GetMedia()
         {
-            return txtFrecuencia.Valor;
+            return txtMedia.Valor;
         }
 
         protected override void LimpiarDatos()
         {
-            txtFrecuencia.Clear();
+            txtMedia.Clear();
         }
     }
 }

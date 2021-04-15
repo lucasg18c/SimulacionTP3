@@ -33,15 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDesviacion = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
             this.gbDatos.SuspendLayout();
+            this.gbIntervalos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblIntervalos
-            // 
-            this.lblIntervalos.Location = new System.Drawing.Point(24, 209);
-            // 
-            // txtIntervalos
-            // 
-            this.txtIntervalos.Location = new System.Drawing.Point(27, 229);
             // 
             // gbDatos
             // 
@@ -49,8 +42,7 @@
             this.gbDatos.Controls.Add(this.txtDesviacion);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.txtMedia);
-            this.gbDatos.Controls.SetChildIndex(this.txtIntervalos, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblIntervalos, 0);
+            this.gbDatos.Controls.SetChildIndex(this.gbIntervalos, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
             this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtMedia, 0);
@@ -102,7 +94,7 @@
             this.txtDesviacion.ShortcutsEnabled = false;
             this.txtDesviacion.Size = new System.Drawing.Size(153, 25);
             this.txtDesviacion.TabIndex = 7;
-            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
             // 
             // FrmNormalBM
             // 
@@ -113,6 +105,8 @@
             this.Text = "Normal Box Muller";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            this.gbIntervalos.ResumeLayout(false);
+            this.gbIntervalos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

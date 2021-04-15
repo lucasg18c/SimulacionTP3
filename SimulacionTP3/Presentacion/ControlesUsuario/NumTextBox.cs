@@ -48,7 +48,7 @@ namespace SimulacionTP3.Formularios.ControlesUsuario
             if (evento.KeyChar == '-' && Text.Length == 0)
                 return;
 
-            if (evento.KeyChar == ',' && !Text.Contains(","))
+            if ((evento.KeyChar == ',' || evento.KeyChar == '.') && !(Text.Contains(",") || Text.Contains(".")))
             {
                 if (Text.Contains("-"))
                 {
@@ -63,8 +63,9 @@ namespace SimulacionTP3.Formularios.ControlesUsuario
 
         private void ValidarReal(KeyPressEventArgs evento)
         {
-            if (evento.KeyChar != ',' || Text.Length == 0 || Text.Contains(","))
-                evento.Handled = true;
+            if ((evento.KeyChar == '.' || evento.KeyChar == ',') && Text.Length != 0 && !(Text.Contains(".") || Text.Contains(",")))
+                return;
+            evento.Handled = true;
         }
 
         private void ValidarEntero(KeyPressEventArgs evento)
@@ -77,6 +78,9 @@ namespace SimulacionTP3.Formularios.ControlesUsuario
             if (Text.Length == 0) return 0;
             try
             {
+                if (Text.Contains("."))
+                    return Convert.ToDouble(Text.Replace('.', ','));
+                
                 return Convert.ToDouble(Text);
             }
             catch (Exception)

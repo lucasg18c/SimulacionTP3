@@ -1,10 +1,8 @@
-﻿using SimulacionTP3.Modelo.PruebasBondad;
-
-namespace SimulacionTP3.Modelo.Distribuciones
+﻿namespace SimulacionTP3.Modelo.Distribuciones
 {
-    public class Uniforme : IDistribucion
+    public class Uniforme : Distribucion
     {
-        public double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
+        public override double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
         {
             int k, n;
             double fe;
@@ -21,21 +19,14 @@ namespace SimulacionTP3.Modelo.Distribuciones
             return frecuencias;
         }
 
-        public int GetDatosEmpiricos()
+        public override int CantidadDatosEmpiricos()
         {
             return 0;
         }
 
-        public string GetNombre()
+        public override string GetNombre()
         {
             return "Uniforme";
-        }
-        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
-        {
-            if (tamanioMuestra >= 30)
-                return new PruebaChiCuadrado();
-            else
-                return new PruebaKS();
         }
     }
 }

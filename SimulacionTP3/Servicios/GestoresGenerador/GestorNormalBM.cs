@@ -20,7 +20,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
             return generador.GenerarNormalBM(media, desviacion, cantidad);
         }
 
-        protected override IDistribucion GetDistribucion()
+        protected override Distribucion GetDistribucion()
         {
             return new Normal();
         }

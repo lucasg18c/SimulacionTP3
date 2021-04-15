@@ -8,7 +8,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
     public class GestorExponencial : GestorGenerador
     {
         private readonly FrmExponencial frmExponencial;
-        private double frecuencia, media;
+        private double media;
             
         public GestorExponencial(FrmGenerador formulario) : base(formulario)
         {
@@ -17,17 +17,16 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
 
         protected override double[] GenerarSerie(Generador generador, int cantidad)
         {
-            return generador.GenerarExponencial(media, frecuencia, cantidad);
+            return generador.GenerarExponencial(media, cantidad);
         }
 
-        protected override IDistribucion GetDistribucion()
+        protected override Distribucion GetDistribucion()
         {
             return new Exponencial();
         }
 
         protected override void PedirDatos()
         {
-            frecuencia = frmExponencial.GetFrecuencia();
             media = frmExponencial.GetMedia();
         }
 

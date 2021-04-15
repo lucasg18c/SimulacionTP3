@@ -1,11 +1,10 @@
-﻿using SimulacionTP3.Modelo.PruebasBondad;
-using System;
+﻿using System;
 
 namespace SimulacionTP3.Modelo.Distribuciones
 {
-    public class Normal : IDistribucion
+    public class Normal : Distribucion
     {
-        public double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
+        public override double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
         {
             int k, n;
             double desviacion, media, exponente, marcaClase, anchoIntervalo, denominador;
@@ -52,23 +51,14 @@ namespace SimulacionTP3.Modelo.Distribuciones
             return Math.Sqrt(suma / (n - 1));
         }
 
-        public string GetNombre()
+        public override string GetNombre()
         {
             return "Normal";
         }
 
-        public int GetDatosEmpiricos()
+        public override int CantidadDatosEmpiricos()
         {
             return 2;
-        }
-
-        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
-        {
-            if (tamanioMuestra >= 30)
-                return new PruebaChiCuadrado();
-            else
-                return new PruebaKS();
-        }
-    
+        }    
     }
 }

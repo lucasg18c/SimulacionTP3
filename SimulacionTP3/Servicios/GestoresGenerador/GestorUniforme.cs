@@ -26,7 +26,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
             b = frmUniforme.GetB();
         }
 
-        protected override IDistribucion GetDistribucion()
+        protected override Distribucion GetDistribucion()
         {
             return new Uniforme();
         }

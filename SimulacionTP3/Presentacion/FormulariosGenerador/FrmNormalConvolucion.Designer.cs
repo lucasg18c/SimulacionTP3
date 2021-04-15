@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMedia = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
             this.gbDatos.SuspendLayout();
+            this.gbIntervalos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -41,8 +42,7 @@
             this.gbDatos.Controls.Add(this.txtDesviacion);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.txtMedia);
-            this.gbDatos.Controls.SetChildIndex(this.txtIntervalos, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblIntervalos, 0);
+            this.gbDatos.Controls.SetChildIndex(this.gbIntervalos, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
             this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
             this.gbDatos.Controls.SetChildIndex(this.txtMedia, 0);
@@ -67,7 +67,7 @@
             this.txtDesviacion.ShortcutsEnabled = false;
             this.txtDesviacion.Size = new System.Drawing.Size(153, 25);
             this.txtDesviacion.TabIndex = 11;
-            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
             // 
             // label1
             // 
@@ -97,6 +97,8 @@
             this.Text = "Normal Convolución";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            this.gbIntervalos.ResumeLayout(false);
+            this.gbIntervalos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

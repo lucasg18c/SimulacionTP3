@@ -1,11 +1,10 @@
-﻿using SimulacionTP3.Modelo.PruebasBondad;
-using System;
+﻿using System;
 
 namespace SimulacionTP3.Modelo.Distribuciones
 {
-    public class Exponencial : IDistribucion
+    public class Exponencial : Distribucion
     {
-        public double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
+        public override double[] CalcularFrecuenciasEsperadas(double[] serie, ConteoFrecuencia[] conteos)
         {
             int k, n;
             double desde, hasta;
@@ -35,22 +34,14 @@ namespace SimulacionTP3.Modelo.Distribuciones
             return 1 / suma;
         }
 
-        public string GetNombre()
+        public override string GetNombre()
         {
             return "Exponencial";
         }
 
-        public int GetDatosEmpiricos()
+        public override int CantidadDatosEmpiricos()
         {
             return 1;
-        }
-
-        public IPruebaBondad ElegirPruebaBondad(int tamanioMuestra)
-        {
-            if (tamanioMuestra >= 30)
-                return new PruebaChiCuadrado();
-            else
-                return new PruebaKS();
         }
     }
 }
