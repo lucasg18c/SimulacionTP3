@@ -39,12 +39,8 @@ namespace SimulacionTP3.Servicios.GestoresPruebaBondad
             form.MostrarValorCritico(pruebaBondad.GetValorCritico());
             form.MostrarNombrePrueba(pruebaBondad.GetNombre());
             form.MostrarConclusion(pruebaBondad.GetConclusion());
+            form.MostrarImagenResultado(pruebaBondad.ResultadoExitoso());
             form.ShowDialog();
-        }
-
-        private void ElegirPruebaBondad()
-        {
-            pruebaBondad = distribucion.ElegirPruebaBondad(serie.Length);
         }
     }
 }

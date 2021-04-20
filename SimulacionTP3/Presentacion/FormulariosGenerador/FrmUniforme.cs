@@ -11,20 +11,14 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
             gestor = new GestorUniforme(this);
         }
 
-        protected override void LimpiarDatos()
-        {
-            txtA.Clear();
-            txtB.Clear();
-        }
-
         public double GetA()
         {
-            return txtA.Valor;
+            return desde.Valor;
         }
 
         public double GetB()
         {
-            return txtB.Valor;
+            return hasta.Valor;
         }
     }
 }

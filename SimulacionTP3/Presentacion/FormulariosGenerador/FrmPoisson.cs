@@ -13,12 +13,7 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
 
         public double GetMedia()
         {
-            return txtMedia.Valor;
-        }
-
-        protected override void LimpiarDatos()
-        {
-            txtMedia.Clear();
+            return media.Valor;
         }
     }
 }

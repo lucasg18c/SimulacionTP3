@@ -1,5 +1,6 @@
 ﻿using SimulacionTP3.Servicios.GestoresGenerador;
 using System;
+using System.Windows.Forms;
 
 namespace SimulacionTP3.Presentacion.FormulariosPadre
 {
@@ -22,34 +23,19 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             gestor.ProbarGenerador(); 
         }
 
-        private void ClickBtnLimpiar(object sender, EventArgs e)
+        private void ClickBtnExportar(object sender, EventArgs e)
         {
-            gestor.Limpiar();
-            txtCantidad.Clear();
-            rb5.Checked = false;
-            rb10.Checked = true;
-            rb15.Checked = false;
-            rb20.Checked = false;
-            LimpiarDatos();
+            gestor.Exportar();
         }
 
         public int GetCantidad()
         {
-            return (int) txtCantidad.Valor;
+            return (int) cantidad.Valor;
         }
 
         public int GetIntervalos()
         {
-            if (rb5.Checked) return 5; 
-            if (rb10.Checked) return 10; 
-            if (rb15.Checked) return 15; 
-            else return 20; 
-        }
-
-        public void Limpiar()
-        {
-            grafica.Series["Numeros"].Points.Clear();
-            txtSerie.Clear();
+            return (int) intervalos.Valor;
         }
 
         public void MostrarGrafico(double x, double y)
@@ -59,16 +45,36 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
 
         public void MostrarSerie(string serie)
         {
-            txtSerie.Text = serie;
+            txtSerieAleatoria.Text = serie;
         }
 
-        protected virtual void LimpiarDatos()
+        public void Esperar(bool esperar)
         {
+            if (esperar)
+                Cursor.Current = Cursors.WaitCursor;
+            else
+                Cursor.Current = Cursors.Default;
         }
 
         public void HabilitarPrueba(bool habilitar)
         {
-            btnProbar.Enabled = habilitar;
+            btnProbar.Visible = habilitar;
+            btnExportar.Visible = habilitar;
+        }
+
+        public void Limpiar()
+        {
+            grafica.Series["Numeros"].Points.Clear();
+        }
+
+        public void SetPortapapeles(string texto)
+        {
+            Clipboard.SetText(texto);
+        }
+
+        private void ClickBtnNombreApp(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

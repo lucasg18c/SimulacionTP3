@@ -55,6 +55,18 @@
     <Compile Include="Modelo\PruebasBondad\PruebaBondad.cs" />
     <Compile Include="Modelo\PruebasBondad\PruebaChiCuadrado.cs" />
     <Compile Include="Modelo\PruebasBondad\PruebaKS.cs" />
+    <Compile Include="Presentacion\ControlesUsuario\DatoCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlesUsuario\DatoCombo.Designer.cs">
+      <DependentUpon>DatoCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ControlesUsuario\DatoTxtNum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlesUsuario\DatoTxtNum.Designer.cs">
+      <DependentUpon>DatoTxtNum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\ControlesUsuario\NumTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     <Compile Include="Servicios\GestoresGenerador\GestorPoisson.cs" />
     <Compile Include="Servicios\GestoresPruebaBondad\GestorPruebaBondad.cs" />
     <Compile Include="Servicios\GestoresGenerador\GestorUniforme.cs" />
+    <EmbeddedResource Include="Presentacion\ControlesUsuario\DatoCombo.resx">
+      <DependentUpon>DatoCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ControlesUsuario\DatoTxtNum.resx">
+      <DependentUpon>DatoTxtNum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormulariosPadre\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +177,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\logo.ico" />
+    <None Include="Resources\cheque.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

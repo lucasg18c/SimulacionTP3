@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using SimulacionTP3.Properties;
+using System.Windows.Forms;
 
 namespace SimulacionTP3.Presentacion.FormulariosVarios
 {
@@ -39,6 +40,15 @@ namespace SimulacionTP3.Presentacion.FormulariosVarios
         public void MostrarNombrePrueba(string v)
         {
             lblPruebaBondad.Text = v;
+        }
+
+        public void MostrarImagenResultado(bool exito)
+        {
+            if (exito)
+                pbResultado.Image = Resources.cheque;
+
+            else
+                pbResultado.Image = Resources.cancelar;            
         }
     }
 }

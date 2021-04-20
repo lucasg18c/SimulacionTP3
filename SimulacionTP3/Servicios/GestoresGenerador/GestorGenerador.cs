@@ -15,6 +15,8 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         private int intervalos, cantidad;
         private Distribucion distribucion;
 
+        private static readonly int DECIMALES_REDONDEO = 4;
+
         protected abstract double[] GenerarSerie(Generador generador, int cantidad);
         protected abstract void PedirDatos();
         protected abstract void ValidarDatos();
@@ -30,8 +32,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         {
             try
             {
-                formulario.HabilitarPrueba(false);
-
+                formulario.Esperar(true);
                 intervalos = formulario.GetIntervalos();
                 cantidad = formulario.GetCantidad();
                 distribucion = GetDistribucion();
@@ -45,11 +46,13 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
                 MostrarGrafico();
                 formulario.MostrarSerie(MostrarSerie());
 
+                formulario.Esperar(false);
                 formulario.HabilitarPrueba(true);
             }
             catch (Exception ex)
             {
                 formulario.MostrarError(ex);
+                formulario.HabilitarPrueba(false);
             }
         }
 
@@ -65,7 +68,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         {
             foreach (ConteoFrecuencia conteo in conteos)
                 formulario.MostrarGrafico(
-                    Math.Round(conteo.Hasta, 4),
+                    Math.Round(conteo.Hasta, DECIMALES_REDONDEO),
                     conteo.Cantidad
                     );
         }
@@ -74,16 +77,9 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         {
             string serieStr = "";
             for (int i = 0; i < cantidad; i++)
-            {
-                serieStr += Math.Round(serie[i], 4).ToString();
-                serieStr += "\t";
-            }
+                serieStr += $"{Math.Round(serie[i], DECIMALES_REDONDEO)}  ";
+            
             return serieStr;
-        }
-
-        public void Limpiar()
-        {
-            formulario.Limpiar();
         }
 
         public void ProbarGenerador()
@@ -98,9 +94,25 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
             }
             catch(Exception)
             {
-                //formulario.MostrarError(ex);
                 formulario.MostrarError("Ocurrió un error al calcular la prueba de bondad." +
                     "\nPor favor, utilice un tamaño de muestra diferente.");
+            }
+        }
+
+        public void Exportar()
+        {
+            try
+            {
+                string exp = "";
+                foreach (double d in serie)
+                    exp += $"{Math.Round(d, DECIMALES_REDONDEO)}\n";
+
+                formulario.SetPortapapeles(exp);
+                formulario.MostrarInformacion("Serie pseudoaleatoria copiada a portapapeles.", "Información");
+            }
+            catch(Exception e)
+            {
+                formulario.MostrarError(e);
             }
         }
     }

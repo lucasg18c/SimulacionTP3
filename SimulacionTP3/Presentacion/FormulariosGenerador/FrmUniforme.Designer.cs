@@ -28,92 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtA = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.labelA = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtB = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.gbDatos.SuspendLayout();
+            this.desde = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.hasta = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbDatos
+            // pnlDatos
             // 
-            this.gbDatos.Controls.Add(this.label1);
-            this.gbDatos.Controls.Add(this.txtB);
-            this.gbDatos.Controls.Add(this.labelA);
-            this.gbDatos.Controls.Add(this.txtA);
-            this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtA, 0);
-            this.gbDatos.Controls.SetChildIndex(this.labelA, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtB, 0);
-            this.gbDatos.Controls.SetChildIndex(this.label1, 0);
+            this.pnlDatos.Controls.Add(this.hasta);
+            this.pnlDatos.Controls.Add(this.desde);
+            this.pnlDatos.Size = new System.Drawing.Size(324, 468);
+            this.pnlDatos.Controls.SetChildIndex(this.desde, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.hasta, 0);
             // 
-            // lblCantidad
+            // desde
             // 
-            this.lblCantidad.Location = new System.Drawing.Point(25, 152);
+            this.desde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.desde.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.desde.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.desde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.desde.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desde.ForeColor = System.Drawing.Color.White;
+            this.desde.Location = new System.Drawing.Point(0, 134);
+            this.desde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.desde.Name = "desde";
+            this.desde.Size = new System.Drawing.Size(324, 53);
+            this.desde.TabIndex = 8;
+            this.desde.Texto = "Desde (A)";
+            this.desde.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.desde.Valor = 5D;
             // 
-            // txtCantidad
+            // hasta
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(28, 172);
-            // 
-            // txtA
-            // 
-            this.txtA.Location = new System.Drawing.Point(28, 54);
-            this.txtA.MaxLength = 6;
-            this.txtA.Name = "txtA";
-            this.txtA.ShortcutsEnabled = false;
-            this.txtA.Size = new System.Drawing.Size(153, 25);
-            this.txtA.TabIndex = 3;
-            this.txtA.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
-            // 
-            // labelA
-            // 
-            this.labelA.AutoSize = true;
-            this.labelA.Location = new System.Drawing.Point(26, 34);
-            this.labelA.Name = "labelA";
-            this.labelA.Size = new System.Drawing.Size(16, 17);
-            this.labelA.TabIndex = 4;
-            this.labelA.Text = "A";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "B";
-            // 
-            // txtB
-            // 
-            this.txtB.Location = new System.Drawing.Point(28, 113);
-            this.txtB.MaxLength = 6;
-            this.txtB.Name = "txtB";
-            this.txtB.ShortcutsEnabled = false;
-            this.txtB.Size = new System.Drawing.Size(153, 25);
-            this.txtB.TabIndex = 5;
-            this.txtB.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.hasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.hasta.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.hasta.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.hasta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hasta.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hasta.ForeColor = System.Drawing.Color.White;
+            this.hasta.Location = new System.Drawing.Point(0, 187);
+            this.hasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hasta.Name = "hasta";
+            this.hasta.Size = new System.Drawing.Size(324, 53);
+            this.hasta.TabIndex = 9;
+            this.hasta.Texto = "Hasta (B)";
+            this.hasta.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.hasta.Valor = 10D;
             // 
             // FrmUniforme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 519);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(1090, 611);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmUniforme";
             this.Text = "Generar Serie Uniforme";
-            this.gbDatos.ResumeLayout(false);
-            this.gbDatos.PerformLayout();
+            this.pnlDatos.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelA;
-        private Formularios.ControlesUsuario.NumTextBox txtA;
-        private System.Windows.Forms.Label label1;
-        private Formularios.ControlesUsuario.NumTextBox txtB;
+        private ControlesUsuario.DatoTxtNum hasta;
+        private ControlesUsuario.DatoTxtNum desde;
     }
 }

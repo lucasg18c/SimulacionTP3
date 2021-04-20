@@ -28,63 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMedia = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.gbDatos.SuspendLayout();
+            this.media = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbDatos
+            // pnlDatos
             // 
-            this.gbDatos.Controls.Add(this.txtMedia);
-            this.gbDatos.Controls.Add(this.label2);
-            this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.label2, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtMedia, 0);
+            this.pnlDatos.Controls.Add(this.media);
+            this.pnlDatos.Size = new System.Drawing.Size(278, 438);
+            this.pnlDatos.Controls.SetChildIndex(this.media, 0);
             // 
-            // lblCantidad
+            // media
             // 
-            this.lblCantidad.Location = new System.Drawing.Point(30, 107);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(33, 127);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Media (μ)";
-            // 
-            // txtMedia
-            // 
-            this.txtMedia.Location = new System.Drawing.Point(33, 57);
-            this.txtMedia.MaxLength = 6;
-            this.txtMedia.Name = "txtMedia";
-            this.txtMedia.ShortcutsEnabled = false;
-            this.txtMedia.Size = new System.Drawing.Size(153, 25);
-            this.txtMedia.TabIndex = 8;
-            this.txtMedia.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
+            this.media.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.media.Dock = System.Windows.Forms.DockStyle.Top;
+            this.media.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.media.ForeColor = System.Drawing.Color.White;
+            this.media.Location = new System.Drawing.Point(0, 134);
+            this.media.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.media.Name = "media";
+            this.media.Size = new System.Drawing.Size(278, 53);
+            this.media.TabIndex = 11;
+            this.media.Texto = "Media (μ)";
+            this.media.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
+            this.media.Valor = 10D;
             // 
             // FrmExponencial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 518);
+            this.ClientSize = new System.Drawing.Size(1088, 609);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmExponencial";
             this.Text = "Exponencial";
-            this.gbDatos.ResumeLayout(false);
-            this.gbDatos.PerformLayout();
+            this.pnlDatos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Formularios.ControlesUsuario.NumTextBox txtMedia;
-        private System.Windows.Forms.Label label2;
+        private ControlesUsuario.DatoTxtNum media;
     }
 }

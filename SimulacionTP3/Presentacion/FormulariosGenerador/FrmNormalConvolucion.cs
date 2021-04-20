@@ -11,20 +11,14 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
             gestor = new GestorConvolucion(this);
         }
 
-        protected override void LimpiarDatos()
-        {
-            txtDesviacion.Clear();
-            txtMedia.Clear();
-        }
-
         public double GetMedia()
         {
-            return txtMedia.Valor;
+            return media.Valor;
         }
 
         public double GetDesviacion()
         {
-            return txtDesviacion.Valor;
+            return desviacion.Valor;
         }
     }
 }

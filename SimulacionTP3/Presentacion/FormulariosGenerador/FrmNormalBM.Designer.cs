@@ -28,95 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMedia = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDesviacion = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.gbDatos.SuspendLayout();
-            this.gbIntervalos.SuspendLayout();
+            this.media = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.desviacion = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbDatos
+            // pnlDatos
             // 
-            this.gbDatos.Controls.Add(this.label2);
-            this.gbDatos.Controls.Add(this.txtDesviacion);
-            this.gbDatos.Controls.Add(this.label1);
-            this.gbDatos.Controls.Add(this.txtMedia);
-            this.gbDatos.Controls.SetChildIndex(this.gbIntervalos, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtMedia, 0);
-            this.gbDatos.Controls.SetChildIndex(this.label1, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtDesviacion, 0);
-            this.gbDatos.Controls.SetChildIndex(this.label2, 0);
+            this.pnlDatos.Controls.Add(this.desviacion);
+            this.pnlDatos.Controls.Add(this.media);
+            this.pnlDatos.Size = new System.Drawing.Size(324, 472);
+            this.pnlDatos.Controls.SetChildIndex(this.cantidad, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.intervalos, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.media, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.desviacion, 0);
             // 
-            // lblCantidad
+            // media
             // 
-            this.lblCantidad.Location = new System.Drawing.Point(24, 152);
+            this.media.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.media.Dock = System.Windows.Forms.DockStyle.Top;
+            this.media.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.media.ForeColor = System.Drawing.Color.White;
+            this.media.Location = new System.Drawing.Point(0, 134);
+            this.media.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.media.Name = "media";
+            this.media.Size = new System.Drawing.Size(324, 53);
+            this.media.TabIndex = 8;
+            this.media.Texto = "Media (μ)";
+            this.media.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.media.Valor = 15D;
             // 
-            // txtCantidad
+            // desviacion
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(27, 172);
-            // 
-            // txtMedia
-            // 
-            this.txtMedia.Location = new System.Drawing.Point(27, 58);
-            this.txtMedia.MaxLength = 6;
-            this.txtMedia.Name = "txtMedia";
-            this.txtMedia.ShortcutsEnabled = false;
-            this.txtMedia.Size = new System.Drawing.Size(153, 25);
-            this.txtMedia.TabIndex = 5;
-            this.txtMedia.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Media (μ)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Desviación (σ)";
-            // 
-            // txtDesviacion
-            // 
-            this.txtDesviacion.Location = new System.Drawing.Point(27, 115);
-            this.txtDesviacion.MaxLength = 6;
-            this.txtDesviacion.Name = "txtDesviacion";
-            this.txtDesviacion.ShortcutsEnabled = false;
-            this.txtDesviacion.Size = new System.Drawing.Size(153, 25);
-            this.txtDesviacion.TabIndex = 7;
-            this.txtDesviacion.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
+            this.desviacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.desviacion.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.desviacion.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.desviacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.desviacion.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desviacion.ForeColor = System.Drawing.Color.White;
+            this.desviacion.Location = new System.Drawing.Point(0, 187);
+            this.desviacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.desviacion.Name = "desviacion";
+            this.desviacion.Size = new System.Drawing.Size(324, 53);
+            this.desviacion.TabIndex = 9;
+            this.desviacion.Texto = "Desviacion (σ)";
+            this.desviacion.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.desviacion.Valor = 1D;
             // 
             // FrmNormalBM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 523);
+            this.ClientSize = new System.Drawing.Size(1093, 615);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmNormalBM";
             this.Text = "Normal Box Muller";
-            this.gbDatos.ResumeLayout(false);
-            this.gbDatos.PerformLayout();
-            this.gbIntervalos.ResumeLayout(false);
-            this.gbIntervalos.PerformLayout();
+            this.pnlDatos.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Formularios.ControlesUsuario.NumTextBox txtMedia;
-        private System.Windows.Forms.Label label2;
-        private Formularios.ControlesUsuario.NumTextBox txtDesviacion;
-        private System.Windows.Forms.Label label1;
+        private ControlesUsuario.DatoTxtNum desviacion;
+        private ControlesUsuario.DatoTxtNum media;
     }
 }

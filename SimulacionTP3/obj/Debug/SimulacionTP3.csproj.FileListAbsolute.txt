@@ -31,3 +31,5 @@ C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmUniforme.resources
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosVarios.FrmMenuPrincipal.resources
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosVarios.FrmPruebaBondad.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum.resources
+C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoCombo.resources

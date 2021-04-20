@@ -29,7 +29,7 @@ namespace SimulacionTP3.Modelo.PruebasBondad
 
         public string GetConclusion()
         {
-            if (estadisticoPrueba <= valorCritico)
+            if (ResultadoExitoso())
                 return $"No se rechaza la hipotesis nula, con 95% de confianza.";
 
             return $"Se rechazada la hipotesis nula, con 95% de confianza..";
@@ -46,6 +46,11 @@ namespace SimulacionTP3.Modelo.PruebasBondad
                 procedimiento[i] = CalcularFila(conteos[i].Desde, conteos[i].Hasta, conteos[i].Cantidad, frecuenciasEsperadas[i], tamanioMuestra, procedimiento[i - 1]);
 
             estadisticoPrueba = procedimiento[k - 1][procedimiento[0].Length - 1];
+        }
+
+        public bool ResultadoExitoso()
+        {
+            return estadisticoPrueba <= valorCritico;
         }
 
         public string GetValorCritico()

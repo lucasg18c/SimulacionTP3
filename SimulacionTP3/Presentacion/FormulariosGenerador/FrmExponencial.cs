@@ -11,14 +11,9 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
             gestor = new GestorExponencial(this);
         }
 
-        protected override void LimpiarDatos()
-        {
-            txtMedia.Clear(); 
-        }
-
         public double GetMedia()
         {
-            return txtMedia.Valor;
+            return media.Valor;
         }
     }
 }

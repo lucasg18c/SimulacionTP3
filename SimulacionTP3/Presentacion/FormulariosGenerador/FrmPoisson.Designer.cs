@@ -28,72 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMedia = new SimulacionTP3.Formularios.ControlesUsuario.NumTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gbDatos.SuspendLayout();
-            this.gbIntervalos.SuspendLayout();
+            this.media = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbDatos
+            // pnlDatos
             // 
-            this.gbDatos.Controls.Add(this.label1);
-            this.gbDatos.Controls.Add(this.txtMedia);
-            this.gbDatos.Controls.SetChildIndex(this.gbIntervalos, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.lblCantidad, 0);
-            this.gbDatos.Controls.SetChildIndex(this.txtMedia, 0);
-            this.gbDatos.Controls.SetChildIndex(this.label1, 0);
+            this.pnlDatos.Controls.Add(this.media);
+            this.pnlDatos.Size = new System.Drawing.Size(324, 468);
+            this.pnlDatos.Controls.SetChildIndex(this.cantidad, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.intervalos, 0);
+            this.pnlDatos.Controls.SetChildIndex(this.media, 0);
             // 
-            // lblCantidad
+            // intervalos
             // 
-            this.lblCantidad.Location = new System.Drawing.Point(12, 112);
+            this.intervalos.Visible = false;
             // 
-            // txtCantidad
+            // media
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(15, 132);
-            // 
-            // gbIntervalos
-            // 
-            this.gbIntervalos.Visible = false;
-            // 
-            // txtMedia
-            // 
-            this.txtMedia.Location = new System.Drawing.Point(15, 56);
-            this.txtMedia.MaxLength = 6;
-            this.txtMedia.Name = "txtMedia";
-            this.txtMedia.ShortcutsEnabled = false;
-            this.txtMedia.Size = new System.Drawing.Size(153, 25);
-            this.txtMedia.TabIndex = 5;
-            this.txtMedia.Tipo = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Media (μ)";
+            this.media.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorFondo = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.media.ColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.media.Dock = System.Windows.Forms.DockStyle.Top;
+            this.media.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.media.ForeColor = System.Drawing.Color.White;
+            this.media.Location = new System.Drawing.Point(0, 134);
+            this.media.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.media.Name = "media";
+            this.media.Size = new System.Drawing.Size(324, 53);
+            this.media.TabIndex = 8;
+            this.media.Texto = "Media (μ)";
+            this.media.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Reales;
+            this.media.Valor = 15D;
             // 
             // FrmPoisson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 519);
+            this.ClientSize = new System.Drawing.Size(1089, 611);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPoisson";
             this.Text = "Poisson";
-            this.gbDatos.ResumeLayout(false);
-            this.gbDatos.PerformLayout();
-            this.gbIntervalos.ResumeLayout(false);
-            this.gbIntervalos.PerformLayout();
+            this.pnlDatos.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private Formularios.ControlesUsuario.NumTextBox txtMedia;
+        private ControlesUsuario.DatoTxtNum media;
     }
 }
