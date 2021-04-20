@@ -17,7 +17,7 @@ namespace SimulacionTP3.Modelo.Distribuciones
 
             for (int i = 0; i < k; i++)
             {
-                frecuencias[i] = Math.Round(n * Math.Pow(media, conteos[i].Desde) * Math.Exp(-media) / Factorial(conteos[i].Desde));
+                frecuencias[i] = n * Math.Pow(media, conteos[i].Desde) * Math.Exp(-media) / Factorial(conteos[i].Desde);
             }
             return frecuencias;
         }
@@ -31,14 +31,14 @@ namespace SimulacionTP3.Modelo.Distribuciones
 
         private int CalcularMedia(double[] serie)
         {
-            int n, suma;
+            double n, suma;
 
             n = serie.Length;
             suma = 0;
 
             for (int i = 0; i < n; i++)
                 suma += (int) serie[i];
-            return suma / n;
+            return (int) Math.Round(suma / n);
         }
 
         public override string GetNombre()

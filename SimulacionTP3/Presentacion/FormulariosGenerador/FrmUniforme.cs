@@ -1,6 +1,5 @@
 ﻿using SimulacionTP3.Presentacion.FormulariosPadre;
 using SimulacionTP3.Servicios.GestoresGenerador;
-using System;
 
 namespace SimulacionTP3.Presentacion.FormulariosGenerador
 {
