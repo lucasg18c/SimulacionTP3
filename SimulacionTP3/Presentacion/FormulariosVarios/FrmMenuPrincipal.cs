@@ -44,5 +44,10 @@ namespace SimulacionTP3.Presentacion.FormulariosVarios
             SubMenu.Visible = false;
             Abrir(new FrmNormalConvolucion());
         }
+
+        private void ClickLblVersion(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/lucasg18c/SimulacionTP3");
+        }
     }
 }

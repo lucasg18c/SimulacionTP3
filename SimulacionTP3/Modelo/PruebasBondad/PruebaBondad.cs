@@ -27,12 +27,12 @@ namespace SimulacionTP3.Modelo.PruebasBondad
             valorCritico = CalcularValorCritico(this.conteos.Length, tamanioMuestra, cantidadDatosEmpiricos);
         }
 
-        public string GetConclusion()
+        public string GetConclusion(string nombreDistribucion)
         {
             if (ResultadoExitoso())
-                return $"No se rechaza la hipotesis nula, con 95% de confianza.";
+                return $"No se rechaza la hipotesis nula, la distribución es {nombreDistribucion}.";
 
-            return $"Se rechazada la hipotesis nula, con 95% de confianza..";
+            return $"Se rechaza la hipotesis nula, la distribución no es {nombreDistribucion}.";
         }
 
         private void CalcularPrueba()

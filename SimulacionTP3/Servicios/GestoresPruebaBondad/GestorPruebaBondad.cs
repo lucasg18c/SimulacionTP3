@@ -38,7 +38,7 @@ namespace SimulacionTP3.Servicios.GestoresPruebaBondad
             form.MostrarEstadisticoPrueba(pruebaBondad.GetEstadisticoPrueba());
             form.MostrarValorCritico(pruebaBondad.GetValorCritico());
             form.MostrarNombrePrueba(pruebaBondad.GetNombre());
-            form.MostrarConclusion(pruebaBondad.GetConclusion());
+            form.MostrarConclusion(pruebaBondad.GetConclusion(distribucion.GetNombre()));
             form.MostrarImagenResultado(pruebaBondad.ResultadoExitoso());
             form.ShowDialog();
         }

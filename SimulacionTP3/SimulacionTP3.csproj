@@ -196,7 +196,6 @@
     <Folder Include="Bibliotecas\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Imagenes\logo.ico" />
     <None Include="Resources\cheque.png" />
     <None Include="Resources\cancelar.png" />
     <None Include="Resources\logo.png" />

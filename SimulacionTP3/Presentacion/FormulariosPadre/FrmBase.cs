@@ -38,6 +38,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
         }
+
         public void MostrarError(Exception error)
         {
             MessageBox.Show(
