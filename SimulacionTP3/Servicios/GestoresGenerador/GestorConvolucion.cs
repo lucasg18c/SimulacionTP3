@@ -24,6 +24,15 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         {
             media = frmConvolucion.GetMedia();
             desviacion = frmConvolucion.GetDesviacion();
+            if (desviacion == 0)
+            {
+                frmConvolucion.MostrarError("No puede introducirse el valor cero como desviacion estandar, Se cambio al numero 1 " +
+                    "por defecto. Puede ingresar nuevamente la misma si asi lo desea.");
+                desviacion = 1;
+                frmConvolucion.SetDesviacion();
+            }
+
+
         }
 
         protected override Distribucion GetDistribucion()

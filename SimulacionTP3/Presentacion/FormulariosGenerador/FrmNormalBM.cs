@@ -18,7 +18,19 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
 
         public double GetDesviacion()
         {
+           
             return desviacion.Valor;
+        }
+
+        public void SetDesviacion()
+        {
+
+            desviacion.Valor = 1;
+        }
+
+        private void pnlDatos_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+        {
+
         }
     }
 }

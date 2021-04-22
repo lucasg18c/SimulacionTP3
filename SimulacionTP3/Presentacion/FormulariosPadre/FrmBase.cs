@@ -58,5 +58,10 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void FrmBase_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

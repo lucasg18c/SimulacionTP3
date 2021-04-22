@@ -3,6 +3,7 @@ using SimulacionTP3.Modelo.Distribuciones;
 using SimulacionTP3.Presentacion.FormulariosGenerador;
 using SimulacionTP3.Presentacion.FormulariosPadre;
 
+
 namespace SimulacionTP3.Servicios.GestoresGenerador
 {
     public class GestorNormalBM : GestorGenerador
@@ -29,10 +30,19 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
         {
             media = frmNormalBM.GetMedia();
             desviacion = frmNormalBM.GetDesviacion();
+            if (desviacion == 0)
+            {
+                frmNormalBM.MostrarError("No puede introducirse el valor cero como desviacion estandar, Se cambio al numero 1 " +
+                    "por defecto. Puede ingresar nuevamente la misma si asi lo desea.");
+                desviacion = 1;
+                frmNormalBM.SetDesviacion();
+            }
+            
         }
 
         protected override void ValidarDatos()
         {
+           
         }
     }
 }

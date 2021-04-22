@@ -50,5 +50,10 @@ namespace SimulacionTP3.Presentacion.FormulariosVarios
             else
                 pbResultado.Image = Resources.cancelar;            
         }
+
+        private void pbResultado_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

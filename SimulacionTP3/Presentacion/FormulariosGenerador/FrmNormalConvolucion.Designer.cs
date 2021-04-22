@@ -37,7 +37,7 @@
             // 
             this.pnlDatos.Controls.Add(this.desviacion);
             this.pnlDatos.Controls.Add(this.media);
-            this.pnlDatos.Size = new System.Drawing.Size(324, 468);
+            this.pnlDatos.Size = new System.Drawing.Size(324, 419);
             this.pnlDatos.Controls.SetChildIndex(this.cantidad, 0);
             this.pnlDatos.Controls.SetChildIndex(this.intervalos, 0);
             this.pnlDatos.Controls.SetChildIndex(this.media, 0);
@@ -74,7 +74,7 @@
             this.desviacion.Size = new System.Drawing.Size(324, 53);
             this.desviacion.TabIndex = 9;
             this.desviacion.Texto = "Desviación (σ)";
-            this.desviacion.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
+            this.desviacion.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
             this.desviacion.Valor = 1D;
             // 
             // FrmNormalConvolucion

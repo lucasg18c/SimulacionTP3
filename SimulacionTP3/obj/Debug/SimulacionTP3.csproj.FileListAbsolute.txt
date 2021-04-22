@@ -33,3 +33,23 @@ C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosVarios.FrmPruebaBondad.resources
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum.resources
 C:\Users\lucas\Desktop\facultad\Simulación\TPs\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoCombo.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe.config
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.exe
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\bin\Debug\SimulacionTP3.pdb
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csprojAssemblyReference.cache
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoCombo.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosPadre.FrmBase.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmExponencial.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosPadre.FrmGenerador.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosVarios.FrmMenuPrincipal.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmNormalBM.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmNormalConvolucion.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmPoisson.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosVarios.FrmPruebaBondad.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Presentacion.FormulariosGenerador.FrmUniforme.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.Properties.Resources.resources
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.GenerateResource.cache
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.csproj.CoreCompileInputs.cache
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.exe
+D:\Alvaro\UTN\4to Año Sistemas\SIM\Trabajos practicos\TP3\SimulacionTP3\SimulacionTP3\obj\Debug\SimulacionTP3.pdb

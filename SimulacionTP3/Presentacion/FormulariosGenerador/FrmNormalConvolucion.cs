@@ -20,5 +20,10 @@ namespace SimulacionTP3.Presentacion.FormulariosGenerador
         {
             return desviacion.Valor;
         }
+
+        public void SetDesviacion()
+        {
+            desviacion.Valor = 1;
+        }
     }
 }
