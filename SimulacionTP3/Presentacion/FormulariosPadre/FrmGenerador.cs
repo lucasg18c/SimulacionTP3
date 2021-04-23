@@ -16,6 +16,15 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
         private void ClickBtnGenerar(object sender, EventArgs e)
         {
             gestor.Generar();
+            PrepararVentana();
+        }
+
+        private void PrepararVentana()
+        {
+            lblGUIVacio.Visible = false;
+            pbGUIVacio.Visible = false;
+            txtSerieAleatoria.Visible = true;
+            grafica.Visible = true;
         }
 
         private void ClickBtnProbar(object sender, EventArgs e)

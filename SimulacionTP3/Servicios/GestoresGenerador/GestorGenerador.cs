@@ -110,7 +110,7 @@ namespace SimulacionTP3.Servicios.GestoresGenerador
                 formulario.SetPortapapeles(exp);
                 formulario.MostrarInformacion("Serie pseudoaleatoria copiada a portapapeles.", "Información");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 formulario.MostrarError(e);
             }

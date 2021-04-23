@@ -16,9 +16,8 @@ namespace SimulacionTP3.Modelo.Distribuciones
             frecuencias = new double[k];
 
             for (int i = 0; i < k; i++)
-            {
                 frecuencias[i] = n * Math.Pow(media, conteos[i].Desde) * Math.Exp(-media) / Factorial(conteos[i].Desde);
-            }
+            
             return frecuencias;
         }
 

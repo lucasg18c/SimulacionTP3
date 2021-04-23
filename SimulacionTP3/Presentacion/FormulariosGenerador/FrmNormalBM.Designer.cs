@@ -31,18 +31,23 @@
             this.media = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
             this.desviacion = new SimulacionTP3.Presentacion.ControlesUsuario.DatoTxtNum();
             this.pnlDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGUIVacio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
             // 
             this.pnlDatos.Controls.Add(this.desviacion);
             this.pnlDatos.Controls.Add(this.media);
-            this.pnlDatos.Size = new System.Drawing.Size(324, 423);
             this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             this.pnlDatos.Controls.SetChildIndex(this.cantidad, 0);
             this.pnlDatos.Controls.SetChildIndex(this.intervalos, 0);
             this.pnlDatos.Controls.SetChildIndex(this.media, 0);
             this.pnlDatos.Controls.SetChildIndex(this.desviacion, 0);
+            // 
+            // pbGUIVacio
+            // 
+            this.pbGUIVacio.Location = new System.Drawing.Point(253, 172);
+            this.pbGUIVacio.Size = new System.Drawing.Size(200, 200);
             // 
             // media
             // 
@@ -55,7 +60,7 @@
             this.media.Location = new System.Drawing.Point(0, 134);
             this.media.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.media.Name = "media";
-            this.media.Size = new System.Drawing.Size(324, 53);
+            this.media.Size = new System.Drawing.Size(287, 53);
             this.media.TabIndex = 8;
             this.media.Texto = "Media (μ)";
             this.media.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.RealesNegativos;
@@ -72,7 +77,7 @@
             this.desviacion.Location = new System.Drawing.Point(0, 187);
             this.desviacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.desviacion.Name = "desviacion";
-            this.desviacion.Size = new System.Drawing.Size(324, 53);
+            this.desviacion.Size = new System.Drawing.Size(287, 53);
             this.desviacion.TabIndex = 9;
             this.desviacion.Texto = "Desviacion (σ)";
             this.desviacion.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
@@ -82,12 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 615);
+            this.ClientSize = new System.Drawing.Size(934, 561);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmNormalBM";
             this.Text = "Normal Box Muller";
             this.pnlDatos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGUIVacio)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

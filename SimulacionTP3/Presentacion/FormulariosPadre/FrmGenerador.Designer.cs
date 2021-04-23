@@ -52,20 +52,23 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlTopAplicacion = new System.Windows.Forms.Panel();
             this.lblNombreApp = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbGUIVacio = new System.Windows.Forms.PictureBox();
+            this.lblGUIVacio = new System.Windows.Forms.Label();
             this.pnlDatos.SuspendLayout();
             this.pnlLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             this.pnlTopAplicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGUIVacio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMg3
             // 
             this.pnlMg3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMg3.Location = new System.Drawing.Point(30, 541);
+            this.pnlMg3.Location = new System.Drawing.Point(30, 542);
             this.pnlMg3.Name = "pnlMg3";
-            this.pnlMg3.Size = new System.Drawing.Size(609, 19);
+            this.pnlMg3.Size = new System.Drawing.Size(617, 19);
             this.pnlMg3.TabIndex = 5;
             // 
             // pnlMg4
@@ -73,7 +76,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlMg4.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMg4.Location = new System.Drawing.Point(0, 59);
             this.pnlMg4.Name = "pnlMg4";
-            this.pnlMg4.Size = new System.Drawing.Size(30, 501);
+            this.pnlMg4.Size = new System.Drawing.Size(30, 502);
             this.pnlMg4.TabIndex = 7;
             // 
             // pnlMg7
@@ -81,23 +84,23 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlMg7.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMg7.Location = new System.Drawing.Point(30, 59);
             this.pnlMg7.Name = "pnlMg7";
-            this.pnlMg7.Size = new System.Drawing.Size(609, 19);
+            this.pnlMg7.Size = new System.Drawing.Size(617, 19);
             this.pnlMg7.TabIndex = 11;
             // 
             // pnlMg5
             // 
             this.pnlMg5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMg5.Location = new System.Drawing.Point(609, 78);
+            this.pnlMg5.Location = new System.Drawing.Point(617, 78);
             this.pnlMg5.Name = "pnlMg5";
-            this.pnlMg5.Size = new System.Drawing.Size(30, 463);
+            this.pnlMg5.Size = new System.Drawing.Size(30, 464);
             this.pnlMg5.TabIndex = 13;
             // 
             // pnlMg6
             // 
             this.pnlMg6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMg6.Location = new System.Drawing.Point(30, 415);
+            this.pnlMg6.Location = new System.Drawing.Point(30, 416);
             this.pnlMg6.Name = "pnlMg6";
-            this.pnlMg6.Size = new System.Drawing.Size(579, 30);
+            this.pnlMg6.Size = new System.Drawing.Size(587, 30);
             this.pnlMg6.TabIndex = 15;
             // 
             // btnExportar
@@ -106,10 +109,10 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.btnExportar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(0, 399);
+            this.btnExportar.Location = new System.Drawing.Point(0, 400);
             this.btnExportar.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(324, 50);
+            this.btnExportar.Size = new System.Drawing.Size(287, 50);
             this.btnExportar.TabIndex = 8;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = false;
@@ -120,9 +123,9 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             // 
             this.pnlMg1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.pnlMg1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMg1.Location = new System.Drawing.Point(0, 397);
+            this.pnlMg1.Location = new System.Drawing.Point(0, 398);
             this.pnlMg1.Name = "pnlMg1";
-            this.pnlMg1.Size = new System.Drawing.Size(324, 2);
+            this.pnlMg1.Size = new System.Drawing.Size(287, 2);
             this.pnlMg1.TabIndex = 9;
             // 
             // btnProbar
@@ -131,12 +134,12 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.btnProbar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnProbar.FlatAppearance.BorderSize = 0;
             this.btnProbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProbar.Location = new System.Drawing.Point(0, 347);
+            this.btnProbar.Location = new System.Drawing.Point(0, 348);
             this.btnProbar.Margin = new System.Windows.Forms.Padding(4);
             this.btnProbar.Name = "btnProbar";
-            this.btnProbar.Size = new System.Drawing.Size(324, 50);
+            this.btnProbar.Size = new System.Drawing.Size(287, 50);
             this.btnProbar.TabIndex = 10;
-            this.btnProbar.Text = "Probar Generador";
+            this.btnProbar.Text = "Probar";
             this.btnProbar.UseVisualStyleBackColor = false;
             this.btnProbar.Visible = false;
             this.btnProbar.Click += new System.EventHandler(this.ClickBtnProbar);
@@ -145,9 +148,9 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             // 
             this.pnlMg2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.pnlMg2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMg2.Location = new System.Drawing.Point(0, 449);
+            this.pnlMg2.Location = new System.Drawing.Point(0, 450);
             this.pnlMg2.Name = "pnlMg2";
-            this.pnlMg2.Size = new System.Drawing.Size(324, 2);
+            this.pnlMg2.Size = new System.Drawing.Size(287, 2);
             this.pnlMg2.TabIndex = 11;
             // 
             // btnGenerar
@@ -156,10 +159,10 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.btnGenerar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnGenerar.FlatAppearance.BorderSize = 0;
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerar.Location = new System.Drawing.Point(0, 451);
+            this.btnGenerar.Location = new System.Drawing.Point(0, 452);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(324, 50);
+            this.btnGenerar.Size = new System.Drawing.Size(287, 50);
             this.btnGenerar.TabIndex = 13;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -174,7 +177,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatos.Location = new System.Drawing.Point(0, 0);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(324, 347);
+            this.pnlDatos.Size = new System.Drawing.Size(287, 348);
             this.pnlDatos.TabIndex = 12;
             // 
             // intervalos
@@ -188,7 +191,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.intervalos.Location = new System.Drawing.Point(0, 66);
             this.intervalos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.intervalos.Name = "intervalos";
-            this.intervalos.Size = new System.Drawing.Size(324, 68);
+            this.intervalos.Size = new System.Drawing.Size(287, 68);
             this.intervalos.TabIndex = 7;
             this.intervalos.Texto = "Intervalos";
             // 
@@ -203,7 +206,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.cantidad.Location = new System.Drawing.Point(0, 0);
             this.cantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(324, 66);
+            this.cantidad.Size = new System.Drawing.Size(287, 66);
             this.cantidad.TabIndex = 6;
             this.cantidad.Texto = "Cantidad";
             this.cantidad.TipoDato = SimulacionTP3.Formularios.ControlesUsuario.NumTextBox.TipoDato.Enteros;
@@ -218,9 +221,9 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlLateral.Controls.Add(this.pnlMg2);
             this.pnlLateral.Controls.Add(this.btnGenerar);
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlLateral.Location = new System.Drawing.Point(639, 59);
+            this.pnlLateral.Location = new System.Drawing.Point(647, 59);
             this.pnlLateral.Name = "pnlLateral";
-            this.pnlLateral.Size = new System.Drawing.Size(324, 501);
+            this.pnlLateral.Size = new System.Drawing.Size(287, 502);
             this.pnlLateral.TabIndex = 8;
             // 
             // grafica
@@ -266,8 +269,9 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(165)))), ((int)(((byte)(142)))));
             series1.Name = "Numeros";
             this.grafica.Series.Add(series1);
-            this.grafica.Size = new System.Drawing.Size(579, 337);
+            this.grafica.Size = new System.Drawing.Size(587, 338);
             this.grafica.TabIndex = 16;
+            this.grafica.Visible = false;
             // 
             // txtSerieAleatoria
             // 
@@ -275,13 +279,14 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.txtSerieAleatoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSerieAleatoria.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtSerieAleatoria.ForeColor = System.Drawing.Color.White;
-            this.txtSerieAleatoria.Location = new System.Drawing.Point(30, 445);
+            this.txtSerieAleatoria.Location = new System.Drawing.Point(30, 446);
             this.txtSerieAleatoria.Name = "txtSerieAleatoria";
             this.txtSerieAleatoria.ReadOnly = true;
             this.txtSerieAleatoria.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtSerieAleatoria.Size = new System.Drawing.Size(579, 96);
+            this.txtSerieAleatoria.Size = new System.Drawing.Size(587, 96);
             this.txtSerieAleatoria.TabIndex = 17;
             this.txtSerieAleatoria.Text = "";
+            this.txtSerieAleatoria.Visible = false;
             // 
             // pnlTopBar
             // 
@@ -290,7 +295,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(963, 59);
+            this.pnlTopBar.Size = new System.Drawing.Size(934, 59);
             this.pnlTopBar.TabIndex = 0;
             // 
             // pnlTopAplicacion
@@ -328,12 +333,37 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.ClickBtnNombreApp);
             // 
+            // pbGUIVacio
+            // 
+            this.pbGUIVacio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbGUIVacio.Image = global::SimulacionTP3.Properties.Resources.dado;
+            this.pbGUIVacio.Location = new System.Drawing.Point(256, 172);
+            this.pbGUIVacio.Name = "pbGUIVacio";
+            this.pbGUIVacio.Size = new System.Drawing.Size(200, 200);
+            this.pbGUIVacio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGUIVacio.TabIndex = 18;
+            this.pbGUIVacio.TabStop = false;
+            // 
+            // lblGUIVacio
+            // 
+            this.lblGUIVacio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGUIVacio.AutoSize = true;
+            this.lblGUIVacio.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGUIVacio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(64)))), ((int)(((byte)(80)))));
+            this.lblGUIVacio.Location = new System.Drawing.Point(184, 375);
+            this.lblGUIVacio.Name = "lblGUIVacio";
+            this.lblGUIVacio.Size = new System.Drawing.Size(345, 30);
+            this.lblGUIVacio.TabIndex = 19;
+            this.lblGUIVacio.Text = "Presione \"Generar\" para empezar...";
+            // 
             // FrmGenerador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(963, 560);
+            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.lblGUIVacio);
+            this.Controls.Add(this.pbGUIVacio);
             this.Controls.Add(this.grafica);
             this.Controls.Add(this.pnlMg6);
             this.Controls.Add(this.txtSerieAleatoria);
@@ -357,7 +387,9 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
             this.pnlTopAplicacion.ResumeLayout(false);
             this.pnlTopAplicacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGUIVacio)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -382,5 +414,7 @@ namespace SimulacionTP3.Presentacion.FormulariosPadre
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlTopAplicacion;
         private System.Windows.Forms.Label lblNombreApp;
+        protected System.Windows.Forms.PictureBox pbGUIVacio;
+        protected System.Windows.Forms.Label lblGUIVacio;
     }
 }

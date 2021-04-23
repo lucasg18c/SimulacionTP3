@@ -49,6 +49,7 @@ namespace SimulacionTP3.Presentacion.ControlesUsuario
         private void ClickValor(object sender, EventArgs e)
         {
             txtValor.Focus();
+            txtValor.SelectAll();
         }
     }
 }
